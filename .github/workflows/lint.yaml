@@ -4,6 +4,7 @@
     push:
       branches:
         - main
+        - main_backend
     pull_request:
 
   jobs:
