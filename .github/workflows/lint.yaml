@@ -1,0 +1,27 @@
+  name: Test and Lint
+
+  on:
+    push:
+      branches:
+        - main
+        - main_backend
+    pull_request:
+
+  jobs:
+    container:
+      runs-on: ubuntu-24.04
+
+      steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11.8'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pylint
+        run: pylint main.py src
