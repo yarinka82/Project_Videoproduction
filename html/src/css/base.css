@@ -1,0 +1,102 @@
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: var(--font-family);
+  font-size: var(--fs-primary);
+  font-weight: var(--fw-medium);
+  background-color: var(--bgcolor-primary);
+  color: var(--color-text-primary);
+}
+
+/* === Fonts Variables === */
+:root {
+  /* Google Fonts (500, 700, 900) */
+  --font-family: 'Inter', 'Inter Placeholder', sans-serif;
+
+  /*Fonts sizes*/
+  --fs-primary: 14px; /* <p> */
+  --fs-secondary: 24px; /* <h3> */
+  --fs-title: 36px; /* <h2> */
+
+  /*Fonts weights*/
+  --fw-medium: 500; /* <p> */
+  --fw-semiBold: 600;
+  --fw-bold: 700;
+  --fw-extraBold: 900;
+
+  /* === Lianer gradient === */
+
+  --link-bg-color: linear-gradient(
+    201deg,
+    rgb(102, 203, 255) 0%,
+    rgb(0, 76, 148) 100%
+  );
+  --hoveredlink-bg-color: linear-gradient(
+    270deg,
+    rgb(102, 203, 255) -32%,
+    rgb(0, 134, 203) 100%
+  );
+  --line-color: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(0, 153, 255) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  --image-blur: linear-gradient(
+    0deg,
+    rgba(0, 153, 255, 0.61) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(253, 254, 255, 0.008) 100%
+  );
+  --card-bg-color: radial-gradient(
+    50% 31% at 50% 0%,
+    rgb(0, 153, 255) 0%,
+    rgb(17, 17, 17) 100%
+  );
+  --image-border-color: radial-gradient(
+    124% 75% at 100% 50%,
+    rgba(0, 153, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+
+  --link-animation-color: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.18) 36.988%,
+    rgba(255, 255, 255, 0.13) 64.3599%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* === Base Colors === */
+:root {
+  /* Background colors */
+  --bgcolor-primary: #fbfbfb;
+  --bgcolor-secondary: #000;
+
+  /* Fonts colors */
+
+  --color-text-primary: #9ca3af; /* <p> */
+  --color-text-secondary: #f4f4f6; /* <h3> */
+  --color-text-black: #000; /* <h2> */
+  --color-text-white: #fff; /* <h1> */
+}
+
+/* :root {
+  --token-483c395d-98a5-4c23-af29-bea72908e92b: #f9fafb;
+  --token-a235945a-b267-4393-9124-089017da9783: #0086cb;
+  --token-ee60a235-947f-476b-81dc-1834f1af0b3a: #111827;
+  --token-6aa2c91d-3eef-4470-885f-78bce3b1b77d: #374151;
+  --token-5eca0a17-f797-456c-bac5-efdeaeff0c0b: #e5e7eb;
+  --token-dfbc1e33-dc3d-4582-bdf8-633e8c6f4f79: #000;
+  --token-fe970af2-997a-4c76-8490-61d4a6bcf24f: #9ca3af;
+  --token-5a64587c-3031-4427-b612-7af2d247be89: #f3f4f6;
+  --token-9c682c5f-cdc7-48a3-8e8c-85c4246e47a4: #fff;
+  --token-448be32f-5ce2-4083-9bd4-714d017438ce: #ff9700;
+  --token-96e3aee0-df31-47ca-b20e-57841f0289ac: #f3b102;
+  --token-35c72760-ab33-4607-b96d-ed9b98f8a0d9: #0090da;
+  --token-eb7b6d97-3952-433e-81bb-c192cbbf1822: #66cbff;
+  --token-c6e98fbd-6551-4a23-b582-f27b355c7007: #004c94;
+  --token-8967b5b6-ba7c-4206-8bde-e6f934ca98d8: #09f;
+  --framer-will-change-override: none;
+} */
