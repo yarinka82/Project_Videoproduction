@@ -1,0 +1,50 @@
+.portfolio {
+  padding: 128px 20px;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.gallery-gropdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px 48px 12px 28px;
+  height: 50px;
+}
+
+.gallery-gropdown-title::after {
+  position: absolute;
+  right: 8px;
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/dropdown-arrow.svg);
+  align-self: center;
+}
+
+.video-container {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+}
