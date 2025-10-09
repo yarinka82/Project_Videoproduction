@@ -12,7 +12,7 @@ export const cards = [
       },
       { id: 2,
         text:'60 Sekunden die überzeugen'},
-      { d: 1,
+      { id: 3,
         text:'Enorme Reichweite und Sichtbarkeit'}
     ]
   },
@@ -29,7 +29,7 @@ export const cards = [
       },
       { id: 2,
         text:'In kurzer Zeit überzeugen'},
-      { id: 1,
+      { id: 3,
         text:'Auffallen am Markt'}
     ],
   },
@@ -46,7 +46,7 @@ export const cards = [
       },
       { id: 2,
         text:'Platzhirsch am Markt werden'},
-      { id: 1,
+      { id: 3,
         text:'Mehr Umsatz & Erfolg'}
     ]
   },
@@ -63,7 +63,7 @@ export const cards = [
       },
       { id: 2,
         text:'Platzhirsch am Markt werden'},
-      { id: 1,
+      { id: 3,
         text:'Mehr Umsatz & Erfolg'}
     ]
   },
@@ -80,7 +80,7 @@ export const cards = [
       },
       { id: 2,
         text:'Platzhirsch am Markt werden'},
-      { id: 1,
+      { id: 3,
         text:'Mehr Umsatz & Erfolg'}
     ]
   },
@@ -97,7 +97,7 @@ export const cards = [
       },
       { id: 2,
         text:'Platzhirsch am Markt werden'},
-      { id: 1,
+      { id: 3,
         text:'Mehr Umsatz & Erfolg'}
     ]
   }
