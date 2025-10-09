@@ -82,7 +82,12 @@ body {
   --color-text-white: #fff; /* <h1> */
 }
 
-/* :root {
+/* === Shadows === */
+:root {
+  --formular-link-shadow: rgba(30, 7, 81, 0.12) 0px 4px 6px 0px;
+}
+
+:root {
   --token-483c395d-98a5-4c23-af29-bea72908e92b: #f9fafb;
   --token-a235945a-b267-4393-9124-089017da9783: #0086cb;
   --token-ee60a235-947f-476b-81dc-1834f1af0b3a: #111827;
@@ -98,5 +103,23 @@ body {
   --token-eb7b6d97-3952-433e-81bb-c192cbbf1822: #66cbff;
   --token-c6e98fbd-6551-4a23-b582-f27b355c7007: #004c94;
   --token-8967b5b6-ba7c-4206-8bde-e6f934ca98d8: #09f;
-  --framer-will-change-override: none;
-} */
+  /* --framer-will-change-override: none; */
+}
+
+/* === Animations === */
+
+/* Animation for Formular-button */
+@keyframes lightning {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  10% {
+    left: 100%;
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}

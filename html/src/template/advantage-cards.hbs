@@ -1,0 +1,29 @@
+
+<ul class="advantages-list">
+  {{#each this}}
+  <li class="advantages-list-item slide-item {{alternatingClass @index 'from-right' 'from-left'}}">
+    <article class="advantage-card">
+      <div class="advantage-content-container">
+        <h4 class="advantage-content-header">{{this.title}}</h4>
+        <p class="advantage-content-text">{{this.description}}</p>
+        <ul class="advantage-content-list">
+          {{#each this.arguments}}
+          <li class="advantage-content-list-item">{{this.text}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="advantage-logo-container">
+        <div class="advantage-logo-thumb">
+          <img
+          src="./src/img/{{this.image}}"
+          alt="{{this.alternative}}"
+          height="100%"
+          class="advantage-logo"
+          >
+        </div>
+      </div>
+    </article>
+  </li>
+  {{/each}}
+</ul>
+
