@@ -5,6 +5,7 @@
 }
 
 .portfolio-info {
+  margin: 0 auto;
   margin-bottom: 74px;
 }
 
@@ -38,8 +39,12 @@
 }
 
 .portfolio-subtitle {
+  max-width: 340px;
+  margin: 0 auto;
   margin-bottom: 30px;
+
   font-size: var(--fs-title);
+  font-weight: var(--fs-semiBold);
   letter-spacing: -0.04em;
   line-height: 1.1em;
   word-spacing: 0.1em;
@@ -50,6 +55,9 @@
 }
 
 .portfolio-description {
+  padding-right: 10%;
+  padding-left: 10%;
+
   font-size: 16px;
   font-weight: var(--fw-bold);
   letter-spacing: -0.02em;
@@ -131,4 +139,20 @@
 .video-title {
   text-align: center;
   font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-info {
+    max-width: 460px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .portfolio-info {
+    max-width: 860px;
+  }
+
+  .portfolio-subtitle {
+    max-width: 100%;
+  }
 }
