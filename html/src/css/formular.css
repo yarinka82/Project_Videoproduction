@@ -1,0 +1,118 @@
+/* ---------------------------------- */
+/* FORMULAR STYLES */
+.contact-grid {
+    width: 100%;
+    max-width: 1000px; 
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+
+.info-container {
+    padding: 35px;
+    background-color: var(--color-deep-blue-dark);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.info-container h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: var(--color-label-gray);
+}
+
+.info-item svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    color: var(--color-accent-orange);
+}
+
+.form-container {
+    width: 100%;
+    padding: 35px;
+    background-color: var(--color-deep-blue-dark);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+}
+
+.form-container h2 {
+    font-size: 1.5rem; 
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--color-text-light);
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 600;
+    color: var(--color-label-gray);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-input-dark);
+    border: 1px solid #1f2d3f;
+    color: var(--color-text-light);
+    border-radius: 10px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--color-accent-orange);
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.4); /* Glow effect on focus */
+}
+
+/* ---------------------------------- */
+/* CTA BUTTON */
+/* ---------------------------------- */
+.cta-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    background-color: var(--color-accent-orange);
+    color: var(--color-background-dark); 
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(255, 140, 0, 0.3);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #FFA500; 
+    transform: translateY(-2px);
+}

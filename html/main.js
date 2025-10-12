@@ -10,6 +10,7 @@ await loadHTML('portfolio', './src/partials/portfolio.html');
 await loadHTML('our_company', './src/partials/our_company.html');
 await loadHTML('blog', './src/partials/blog.html');
 await loadHTML('faq', './src/partials/faq.html');
+await loadHTML('formular', './src/partials/formular.html');
 
 await loadHTML('footer', './src/partials/footer.html');
 
