@@ -1,5 +1,6 @@
 import { loadHTML } from './src/js/common/htmlBundler.js';
 import { makeAdvantagesSectionMarkup } from './src/js/advantages/makeAdvantagesSection.js';
+import { fetchVideos } from './src/js/portfolio/fetchVideos.js';
 
 // Partials bundlingh
 await loadHTML('header', './src/partials/header.html');
@@ -15,5 +16,9 @@ await loadHTML('formular', './src/partials/formular.html');
 await loadHTML('footer', './src/partials/footer.html');
 
 // Section rendering
-makeAdvantagesSectionMarkup('advantages-glr', './src/template/advantage-cards.hbs');
+makeAdvantagesSectionMarkup(
+  'advantages-glr',
+  './src/template/advantage-cards.hbs'
+);
 
+fetchVideos();
