@@ -1,4 +1,4 @@
-export function onMenuClick () {
+export async function onMenuClick() {
   const btnRef = document.getElementById('menu-btn');
 
   btnRef.addEventListener('click', clickByMenuBtn);

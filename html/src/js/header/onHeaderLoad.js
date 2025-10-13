@@ -1,4 +1,4 @@
-export function onHeaderLoad() {
+export async function onHeaderLoad() {
   toggleNavVisibility();
 
   window.addEventListener('resize', toggleNavVisibility);
