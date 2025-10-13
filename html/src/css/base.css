@@ -73,6 +73,7 @@ body {
   /* Background colors */
   --bgcolor-primary: #fbfbfb;
   --bgcolor-secondary: #000;
+  --header-bg-color: rgba(17, 24, 38, 0.73);
 
   /* Fonts colors */
 
