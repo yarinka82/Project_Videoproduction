@@ -107,6 +107,10 @@
   align-self: center;
 }
 
+.gallery-dropdown-button.is-open .gallery-dropdown-title::after {
+  transform: rotate(180deg);
+}
+
 .gallery-categories {
   position: absolute;
   left: 0;
@@ -191,6 +195,10 @@
 .video-title {
   text-align: center;
   font-size: 16px;
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {

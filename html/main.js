@@ -1,7 +1,7 @@
 import { loadHTML } from './src/js/common/htmlBundler.js';
 import { makeAdvantagesSectionMarkup } from './src/js/advantages/makeAdvantagesSection.js';
 import { fetchVideos } from './src/js/portfolio/fetchVideos.js';
-import { renderCategories } from './src/js/portfolio/renderCategories.js';
+import { initializeCategoryToggle } from './src/js/portfolio/toggleCategoriesVisibility.js';
 
 // Partials bundlingh
 await loadHTML('header', './src/partials/header.html');
@@ -21,5 +21,6 @@ makeAdvantagesSectionMarkup(
   './src/template/advantage-cards.hbs'
 );
 
+// Portfolio
 fetchVideos();
-renderCategories();
+initializeCategoryToggle();
