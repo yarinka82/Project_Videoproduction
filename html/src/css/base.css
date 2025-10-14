@@ -66,6 +66,7 @@ body {
     rgba(255, 255, 255, 0.13) 64.3599%,
     rgba(255, 255, 255, 0) 100%
   );
+  --color-accent-orange: #FF8C00;
 }
 
 /* === Base Colors === */
