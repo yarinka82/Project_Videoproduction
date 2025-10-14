@@ -3,6 +3,8 @@ import { makeAdvantagesSectionMarkup } from './src/js/advantages/makeAdvantagesS
 import { onMenuClick } from './src/js/header/onMenuClick.js';
 import { onHeaderLoad } from './src/js/header/onHeaderLoad.js';
 import { BLOCK_TYPE } from './src/js/common/constants.js';
+import { fetchVideos } from './src/js/portfolio/fetchVideos.js';
+import { initializeCategoryToggle } from './src/js/portfolio/toggleCategoriesVisibility.js';
 
 // Partials bundlingh
 await loadHTML(BLOCK_TYPE.HEADER, './src/partials/header.html');
@@ -19,3 +21,6 @@ makeAdvantagesSectionMarkup('advantages-glr', './src/template/advantage-cards.hb
 onHeaderLoad()
 onMenuClick();
 
+// Portfolio
+fetchVideos();
+initializeCategoryToggle();
