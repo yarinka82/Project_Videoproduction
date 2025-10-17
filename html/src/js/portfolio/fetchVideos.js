@@ -1,28 +1,18 @@
+import { renderVideosList } from './renderVideosList.js';
+
 const exampleVideos = [
-  { id: 'CjO9JVlbQSM', title: 'Video 1' },
-  { id: 'toJEvF6L1Yk', title: 'Video 2' },
-  { id: 'UQPqg4gSSXc', title: 'Video 3' },
+  { id: 'CjO9JVlbQSM', title: 'Video 1', categoryId: 5 },
+  { id: 'toJEvF6L1Yk', title: 'Video 2', categoryId: 3 },
+  { id: 'UQPqg4gSSXc', title: 'Video 3', categoryId: 4 },
 ];
 
-export async function fetchVideos() {
+export async function fetchVideos(categoryId) {
   const videoList = document.getElementById('videos');
+  if (!videoList) return;
 
-  exampleVideos.map((video) => {
-    const videoContainer = document.createElement('li');
-    videoContainer.className = 'video-container';
+  const videos = categoryId
+    ? exampleVideos.filter((v) => String(v.categoryId) === String(categoryId))
+    : exampleVideos;
 
-    const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube.com/embed/${video.id}`;
-    iframe.allow =
-      'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-    iframe.allowFullscreen = true;
-
-    const videoTitle = document.createElement('p');
-    videoTitle.className = 'video-title';
-    videoTitle.textContent = `${video.title}`;
-
-    videoContainer.appendChild(iframe);
-    videoContainer.appendChild(videoTitle);
-    videoList.appendChild(videoContainer);
-  });
+  renderVideosList(videos, videoList);
 }
