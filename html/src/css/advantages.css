@@ -241,6 +241,10 @@
   transform: translateX(0);
 }
 
+.pre-line {
+  white-space: pre-line;
+}
+
 @media screen and (min-width: 810px) {
   .advantage-card {
     flex-direction: row-reverse;
