@@ -13,7 +13,7 @@
   max-height: 50px;
   background-color: var(--header-bg-color);
   border-radius: 42px;
-  transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease, border-radius 0.4s ease-out;
   overflow: hidden;
 }
 
@@ -35,12 +35,12 @@
   background-position: center;
   background-size: cover;
   border: none;
+  transition: translateY 1s ease;
 }
 
 .header-container.isOpened .header-navigation-btn {
-  right: 34px;
-  top: 16px;
   background-image: url('../img/close.svg');
+  transform: translateY(8px);
 }
 
 .header-logo {
@@ -125,8 +125,7 @@
   }
 
   .header-container.isOpened .header-navigation-btn {
-    top: 24px;
-    right: 34px;
+    transform: translateY(6px);
   }
 
   .header-formular-link {
