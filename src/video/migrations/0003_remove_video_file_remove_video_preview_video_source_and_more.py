@@ -6,31 +6,39 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('video', '0002_video_file'),
+        ("video", "0002_video_file"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='video',
-            name='file',
+            model_name="video",
+            name="file",
         ),
         migrations.RemoveField(
-            model_name='video',
-            name='preview',
+            model_name="video",
+            name="preview",
         ),
         migrations.AddField(
-            model_name='video',
-            name='source',
-            field=models.CharField(choices=[('local', 'Local upload'), ('youtube', 'YouTube'), ('gdrive', 'Google Drive')], default='local', max_length=20),
+            model_name="video",
+            name="source",
+            field=models.CharField(
+                choices=[
+                    ("local", "Local upload"),
+                    ("youtube", "YouTube"),
+                    ("gdrive", "Google Drive"),
+                ],
+                default="local",
+                max_length=20,
+            ),
         ),
         migrations.AlterField(
-            model_name='video',
-            name='title',
+            model_name="video",
+            name="title",
             field=models.CharField(max_length=200),
         ),
         migrations.AlterField(
-            model_name='video',
-            name='url',
+            model_name="video",
+            name="url",
             field=models.URLField(blank=True, null=True),
         ),
     ]

@@ -6,13 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('video', '0010_video_video_id_alter_video_preview_url'),
+        ("video", "0010_video_video_id_alter_video_preview_url"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='video',
-            name='preview_url_manual',
-            field=models.URLField(blank=True, help_text='If set, this URL will be used instead of the automatic preview', null=True, verbose_name='Manual preview URL'),
+            model_name="video",
+            name="preview_url_manual",
+            field=models.URLField(
+                blank=True,
+                help_text="If set, this URL will be used instead of the automatic preview",
+                null=True,
+                verbose_name="Manual preview URL",
+            ),
         ),
     ]

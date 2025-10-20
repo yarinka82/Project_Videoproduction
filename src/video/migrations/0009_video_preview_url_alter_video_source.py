@@ -6,18 +6,22 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('video', '0008_alter_category_options_alter_video_options_and_more'),
+        ("video", "0008_alter_category_options_alter_video_options_and_more"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='video',
-            name='preview_url',
+            model_name="video",
+            name="preview_url",
             field=models.URLField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='video',
-            name='source',
-            field=models.CharField(choices=[('youtube', 'YouTube'), ('gdrive', 'Google Drive')], default='youtube', max_length=20),
+            model_name="video",
+            name="source",
+            field=models.CharField(
+                choices=[("youtube", "YouTube"), ("gdrive", "Google Drive")],
+                default="youtube",
+                max_length=20,
+            ),
         ),
     ]

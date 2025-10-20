@@ -1,14 +1,12 @@
 import os
+
 import requests
 from django.conf import settings
 
+
 def send_telegram_message(text):
     url = f"https://api.telegram.org/bot{settings.TELEGRAM_TOKEN}/sendMessage"
-    payload = {
-        "chat_id": settings.TELEGRAM_CHAT_ID,
-        "text": text,
-        "parse_mode": "HTML"
-    }
+    payload = {"chat_id": settings.TELEGRAM_CHAT_ID, "text": text, "parse_mode": "HTML"}
     try:
         response = requests.post(url, data=payload, timeout=5)
         if response.status_code != 200:
@@ -16,17 +14,18 @@ def send_telegram_message(text):
     except requests.RequestException as e:
         print(f"Telegram error: {e}")
 
+
 def send_brevo_email(subject, message, to_email=None):
     url = "https://api.brevo.com/v3/smtp/email"
     headers = {
         "api-key": os.getenv("BREVO_API_KEY"),
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
     }
     payload = {
         "sender": {"name": "Garaj", "email": os.getenv("EMAIL_SENDER")},
         "to": [{"email": to_email or os.getenv("EMAIL_RECEIVER")}],
         "subject": subject,
-        "textContent": message
+        "textContent": message,
     }
 
     try:
@@ -35,6 +34,7 @@ def send_brevo_email(subject, message, to_email=None):
     except Exception as e:
         print(f"❌ Brevo API error: {e}")
         send_telegram_message(f"<b>Brevo error:</b> {e}")
+
 
 def notify_all_channels(inquiry):
     subject = "Neue Anfrage"

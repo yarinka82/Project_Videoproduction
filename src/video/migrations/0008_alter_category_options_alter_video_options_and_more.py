@@ -6,31 +6,35 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('video', '0007_category_alter_video_category'),
+        ("video", "0007_category_alter_video_category"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='category',
-            options={'ordering': ['order']},
+            name="category",
+            options={"ordering": ["order"]},
         ),
         migrations.AlterModelOptions(
-            name='video',
-            options={'ordering': ['order']},
+            name="video",
+            options={"ordering": ["order"]},
         ),
         migrations.AddField(
-            model_name='category',
-            name='order',
+            model_name="category",
+            name="order",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AddField(
-            model_name='video',
-            name='order',
+            model_name="video",
+            name="order",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='video',
-            name='source',
-            field=models.CharField(choices=[('youtube', 'YouTube'), ('gdrive', 'Google Drive')], default='YouTube', max_length=20),
+            model_name="video",
+            name="source",
+            field=models.CharField(
+                choices=[("youtube", "YouTube"), ("gdrive", "Google Drive")],
+                default="YouTube",
+                max_length=20,
+            ),
         ),
     ]

@@ -6,18 +6,22 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('video', '0003_remove_video_file_remove_video_preview_video_source_and_more'),
+        ("video", "0003_remove_video_file_remove_video_preview_video_source_and_more"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='video',
-            name='preview',
-            field=models.ImageField(blank=True, null=True, upload_to='previews/'),
+            model_name="video",
+            name="preview",
+            field=models.ImageField(blank=True, null=True, upload_to="previews/"),
         ),
         migrations.AlterField(
-            model_name='video',
-            name='source',
-            field=models.CharField(choices=[('youtube', 'YouTube'), ('gdrive', 'Google Drive')], default='local', max_length=20),
+            model_name="video",
+            name="source",
+            field=models.CharField(
+                choices=[("youtube", "YouTube"), ("gdrive", "Google Drive")],
+                default="local",
+                max_length=20,
+            ),
         ),
     ]

@@ -1,1 +1,1 @@
-default_app_config = 'src.clientInquiry.apps.ClientInquiryConfig'
+default_app_config = "src.clientInquiry.apps.ClientInquiryConfig"
