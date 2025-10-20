@@ -6,11 +6,12 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 
+
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "backend.settings")
     try:
-        from django.core.management import execute_from_command_line
+        from django.core.management import execute_from_command_line  # pylint: disable=import-outside-toplevel
     except ImportError as exc:
         raise ImportError(
             "Couldn't import Django. Are you sure it's installed and "
@@ -20,5 +21,5 @@ def main():
     execute_from_command_line(sys.argv)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
