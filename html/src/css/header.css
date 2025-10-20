@@ -5,6 +5,7 @@
   left: calc(100vw / 2);
   width: calc(87vw);
   transform: translateX(-50%);
+  pointer-events: all;
 }
 
 .header-container {
@@ -35,12 +36,15 @@
   background-position: center;
   background-size: cover;
   border: none;
-  transition: translateY 1s ease;
 }
 
 .header-container.isOpened .header-navigation-btn {
   background-image: url('../img/close.svg');
   transform: translateY(8px);
+}
+
+.header-logo-thumb {
+  max-height: 36px;
 }
 
 .header-logo {
@@ -49,7 +53,7 @@
 }
 
 .header-logo-link {
-  display: block;
+  display: inline-block;
   height: 36px;
 }
 
