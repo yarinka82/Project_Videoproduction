@@ -42,7 +42,7 @@
   max-width: 340px;
   margin: 0 auto;
   margin-bottom: 30px;
-
+  opacity: 0;
   font-size: var(--fs-title);
   font-weight: var(--fs-semiBold);
   letter-spacing: -0.04em;
@@ -182,6 +182,7 @@
   border-radius: 12px;
   overflow: hidden;
   background-color: #fff;
+  height: auto;
 }
 
 .video-container iframe {

@@ -15,8 +15,14 @@ body {
 
   /*Fonts sizes*/
   --fs-primary: 14px; /* <p> */
+  --fs-normal: 16px; /* <p normal> */
+  --fs-big: 18px; /* <p big> */
   --fs-secondary: 24px; /* <h3> */
   --fs-title: 36px; /* <h2> */
+
+  @media only screen and (min-width: 768px) {
+    --fs-title: 56px;
+  }
 
   /*Fonts weights*/
   --fw-medium: 500; /* <p> */
@@ -123,4 +129,13 @@ body {
   100% {
     opacity: 0;
   }
+}
+
+h2 {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-bold);
+}
+
+h4 {
+  font-size: 22px;
 }
