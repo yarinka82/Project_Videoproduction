@@ -131,6 +131,10 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h2 {
   font-size: var(--fs-title);
   font-weight: var(--fw-bold);
