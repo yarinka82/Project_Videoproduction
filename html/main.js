@@ -34,7 +34,6 @@ initializeCategoryToggle();
 
 setTimeout(() => {
   initFaq();
-  console.log("🚀 ~ test:")
   initPortfolio();
 }, 2500);
 
