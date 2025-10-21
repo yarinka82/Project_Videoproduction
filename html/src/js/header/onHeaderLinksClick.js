@@ -1,4 +1,3 @@
-import { smoothMenuOpening } from "./smoothMenuOpening.js";
 import { onClick } from "./onClick.js";
 
 export function onHeaderLinksClick() {
@@ -9,7 +8,5 @@ export function onHeaderLinksClick() {
 
   [...navLinksRef, toFormularLink].forEach(link => {
     link.addEventListener('click', onClick);
-
-    smoothMenuOpening(link);
   });
 }

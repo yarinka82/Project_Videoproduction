@@ -10,7 +10,6 @@
 
 .header-container {
   padding: 8px 32px;
-  min-height: 50px;
   max-height: 50px;
   background-color: var(--header-bg-color);
   border-radius: 42px;
@@ -21,7 +20,15 @@
 .header-container.isOpened {
   padding: 16px 32px 32px 32px;
   border-radius: 32px;
-  /* height: auto; */
+  max-height: none;
+}
+
+.header-navigation {
+  display: none;
+}
+
+.header-container.isOpened .header-navigation {
+  display: block;
 }
 
 .header-navigation-btn {
@@ -112,7 +119,6 @@
 @media screen and (min-width: 810px) {
   .header-container {
     padding: 12px 32px 12px 64px;
-    min-height: 70px;
     max-height: 70px;
     border-radius: 42px;
   }
@@ -120,10 +126,6 @@
   .header-container.isOpened {
     padding: 24px 32px 32px 64px;
     border-radius: 32px;
-  }
-
-  .header-logo-thumb {
-    max-height: 46px;
   }
 
   .header-logo {
