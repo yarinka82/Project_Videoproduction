@@ -1,15 +1,16 @@
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        // если хочешь, чтобы появлялся только один раз:
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.2 // элемент виден хотя бы на 20%
-});
+export function startObserver(selector, callback, classToAdd = "visible") {
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (typeof callback === "function") callback(entry.target);
+          entry.target.classList.add(classToAdd);
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
 
-export const startObserver = function (classNameToObserve) {
-  document.querySelectorAll(classNameToObserve).forEach(el => observer.observe(el));
-};
+  document.querySelectorAll(selector).forEach((el) => observer.observe(el));
+}

@@ -27,6 +27,8 @@ a {
 button {
   cursor: pointer;
   padding: 0;
+  outline: none;
+  border: none;
 }
 
 img {

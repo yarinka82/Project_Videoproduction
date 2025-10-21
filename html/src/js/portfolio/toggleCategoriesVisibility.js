@@ -1,4 +1,4 @@
-import { renderCategories } from './renderCategories.js';
+import { exampleCategories, renderCategories } from './renderCategories.js';
 
 function toggleCategoriesVisibility() {
   const categoriesList = document.getElementById('video-categories');
@@ -10,7 +10,7 @@ function toggleCategoriesVisibility() {
 
   if (!isNowHidden) {
     toggleButton.classList.add('is-open');
-    renderCategories();
+    renderCategories(exampleCategories);
   } else {
     toggleButton.classList.remove('is-open');
   }
@@ -18,6 +18,7 @@ function toggleCategoriesVisibility() {
 
 export function initializeCategoryToggle() {
   const toggleButton = document.getElementById('categories-button');
-  if (toggleButton)
+  if (toggleButton) {
     toggleButton.addEventListener('click', toggleCategoriesVisibility);
+  }
 }
