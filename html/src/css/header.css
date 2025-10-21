@@ -103,7 +103,7 @@
   font-weight: 200;
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
   .header-formular-link-title:last-child {
     display: none;
   }
