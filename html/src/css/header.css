@@ -20,15 +20,15 @@
 .header-container.isOpened {
   padding: 16px 32px 32px 32px;
   border-radius: 32px;
-  max-height: none;
+  max-height: 370px;
 }
 
 .header-navigation {
-  display: none;
+  visibility: hidden;
 }
 
 .header-container.isOpened .header-navigation {
-  display: block;
+  visibility: visible;
 }
 
 .header-navigation-btn {
@@ -177,6 +177,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    visibility: visible;
   }
 
   .header-navigation-btn {
