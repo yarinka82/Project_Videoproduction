@@ -1,5 +1,6 @@
 @import url('./reset.css');
 @import url('./base.css');
+@import url("./common.css");
 @import url('./header.css');
 @import url('./hero.css');
 @import url('./portfolio.css');
@@ -7,4 +8,5 @@
 @import url('./our_company.css');
 @import url('./faq.css');
 @import url('./footer.css');
+@import url("./slaider.css");
 @import url('./impressum.css');

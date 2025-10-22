@@ -1,20 +1,15 @@
+import { onHeaderMenuBtnClick } from "./onHeaderMenuBtnClick.js";
+import { onHeaderLinksClick } from "./onHeaderLinksClick.js";
+import { fixHeaderPosition } from "./fixHeaderPosition.js";
+
 export async function onHeaderLoad() {
-  toggleNavVisibility();
+  fixHeaderPosition();
+  onHeaderMenuBtnClick();
+  onHeaderLinksClick();
 
-  window.addEventListener('resize', toggleNavVisibility);
+  window.addEventListener('resize', fixHeaderPosition);
+  window.addEventListener('resize', onHeaderMenuBtnClick);
 }
 
-function toggleNavVisibility() {
-  const navRef = document.getElementById('nav');
-  const menuBtnRef = document.getElementById('menu-btn');
 
-  if (!nav) return;
 
-  if (window.innerWidth < 1200) {
-    navRef.classList.add('visually-hidden');
-    menuBtnRef.classList.remove('visually-hidden');
-  } else {
-    navRef.classList.remove('visually-hidden');
-    menuBtnRef.classList.add('visually-hidden');
-  }
-}

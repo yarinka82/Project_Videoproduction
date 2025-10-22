@@ -316,6 +316,8 @@
 @media screen and (min-width: 1200px) {
   .section-container {
     max-width: 1200px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .advantage-content-header {
