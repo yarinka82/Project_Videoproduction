@@ -10,5 +10,5 @@ export async function makeProblemsSectionMarkup(containerId, tmpLink) {
   if (!cards) return;
 
   addMarkup(ref, cardsTmp, cards);
-  // startObserver('.slide-item');
+  startObserver('.slide-problem-item', false, 'visible', true);
 }
