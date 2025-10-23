@@ -13,6 +13,7 @@ function toggleCategoriesVisibility() {
     renderCategories(exampleCategories);
   } else {
     toggleButton.classList.remove('is-open');
+    categoriesList.innerHTML = '';
   }
 }
 
