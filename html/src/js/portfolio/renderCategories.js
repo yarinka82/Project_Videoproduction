@@ -1,12 +1,15 @@
 import { fetchCategory } from '../slaider/fetchCategory.js';
-import { fetchVideos } from './fetchVideos.js';
+import { handleCategoryClick } from './handleCategoryClick.js';
 
 let cachedCategories = [];
+let isListenerAttached = false;
 
 export async function renderCategories() {
   const categoriesList = document.getElementById('video-categories');
 
   if (!categoriesList) return;
+
+  categoriesList.innerHTML = '';
 
   const fetchedCategories = await fetchCategory();
 
@@ -22,16 +25,26 @@ export async function renderCategories() {
     categoryItem.dataset.categoryId = category.id;
 
     const textSpan = document.createElement('span');
-    textSpan.textContent = `${category.name}`;
+    textSpan.textContent = category.name;
 
     categoryItem.appendChild(textSpan);
     categoriesList.appendChild(categoryItem);
   });
 
-  categoriesList.addEventListener('click', (e) => {
-    const clickedItem = e.target.closest('li');
-    if (!clickedItem) return;
-    fetchVideos(clickedItem.dataset.categoryId);
-    categoriesList.classList.add('hidden');
-  });
+  if (!isListenerAttached) {
+    categoriesList.addEventListener('click', (e) => {
+      const clickedItem = e.target.closest('li');
+      if (!clickedItem) return;
+
+      const categoryId = clickedItem.dataset.categoryId;
+
+      try {
+        handleCategoryClick(categoryId);
+      } catch (error) {
+        console.error('Failed to fetch videos:', error);
+      }
+      categoriesList.classList.add('hidden');
+    });
+    isListenerAttached = true;
+  }
 }
