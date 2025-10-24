@@ -72,6 +72,18 @@ body {
     rgba(255, 255, 255, 0.13) 64.3599%,
     rgba(255, 255, 255, 0) 100%
   );
+
+  --problems-card-bg-color: radial-gradient(
+    68.0303% 69.3939% at 18.3333% 15.8333%,
+    rgb(33, 33, 33) 47.4878%,
+    rgba(18, 18, 18, 0.75) 100%
+  );
+
+  --problems-card1-thumb-bg-color: radial-gradient(
+    50% 31% at 50% 100%,
+    rgba(0, 153, 255, 0.6) 0%,
+    rgba(18, 18, 18, 0) 100%
+  );
 }
 
 /* === Base Colors === */
@@ -110,10 +122,16 @@ body {
   --token-eb7b6d97-3952-433e-81bb-c192cbbf1822: #66cbff;
   --token-c6e98fbd-6551-4a23-b582-f27b355c7007: #004c94;
   --token-8967b5b6-ba7c-4206-8bde-e6f934ca98d8: #09f;
+  --token-8967b5b7-ba7d-4206-8bde-e6f934ca98d8: #262626;
+  --token-8967b5b7-de7d-4207-8bde-e6f934ca98d8: #050505;
   /* --framer-will-change-override: none; */
 }
 
 /* === Animations === */
+:root {
+  --euro-animation-duration: 3s;
+  --euro-blinking-duration: 5s;
+}
 
 /* Animation for Formular-button */
 @keyframes lightning {
