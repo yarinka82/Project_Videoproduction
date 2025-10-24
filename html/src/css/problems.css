@@ -1,3 +1,8 @@
+:root {
+  --hand-animation-duration: 4s;
+  --hand-animation-delay: 3s;
+}
+
 .problem-card {
   position: relative;
   overflow: hidden;
@@ -366,8 +371,8 @@
   background-size: contain;
   opacity: 0.75;
   transform: translate(0, -50%);
-  animation-duration: 4s;
-  animation-delay: 3s;
+  animation-duration: var(--hand-animation-duration);
+  animation-delay: var(--hand-animation-delay);
   animation-iteration-count: infinite;
 }
 
