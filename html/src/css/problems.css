@@ -195,14 +195,15 @@
   height: 80px;
   color: var(--token-fe970af2-997a-4c76-8490-61d4a6bcf24f);
   border-radius: 7px;
+  border: 1px solid var(--token-8967b5b7-ba7d-4206-8bde-e6f934ca98d8);
   background-image: var(--problems-card-bg-color);
   transform: translate(-50%, -50%);
 }
 
 .problems-card1-img-thumb svg,
 .problems-card2-img-thumb svg {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
 }
 
 .problems-card1-euro-list {
@@ -262,15 +263,24 @@
 }
 
 .problems-card2-img-thumb {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 188px;
+}
+
+.problems-card2-container {
+  position: relative;
+  width: 285px;
+  height: 100%;
 }
 
 .problems-card2-img-content {
   position: absolute;
   top: 50%;
   left: 50%;
+  max-width: 200px;
   z-index: 2;
   display: flex;
   justify-content: center;
@@ -279,6 +289,7 @@
   height: 60px;
   color: var(--token-fe970af2-997a-4c76-8490-61d4a6bcf24f);
   border-radius: 40px;
+  border: 1px solid var(--token-8967b5b7-ba7d-4206-8bde-e6f934ca98d8);
   background-image: var(--problems-card-bg-color);
   transform: translate(-50%, -50%);
 }
@@ -286,7 +297,7 @@
 .problems-card2-user-list {
   position: absolute;
   top: 50%;
-  right: 32px;
+  right: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -298,18 +309,125 @@
 }
 
 .problems-card2-user-item {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   background-image: var(--problems-card-bg-color);
   border-radius: 7px;
+  border: 1px solid var(--token-8967b5b7-ba7d-4206-8bde-e6f934ca98d8);
+}
+
+.problems-card2-user-item::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  content: '';
+  width: 160px;
+  height: 0px;
+  border-top: 1px solid var(--token-8967b5b7-ba7d-4206-8bde-e6f934ca98d8);
+  transform-origin: left center;
+}
+
+.problems-card2-user-item:nth-child(1)::before {
+  transform: rotate(155deg);
+}
+
+.problems-card2-user-item:nth-child(3)::before {
+  transform: rotate(205deg);
+}
+
+.problems-card2-user-item:nth-child(2)::before {
+  width: 150px;
+  transform: rotate(180deg);
+}
+
+.problems-card2-user-item:nth-child(1)::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 160px;
+  transform: rotate(155deg);
+}
+
+.problems-card2-user-item::after {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+
+  background-image: url(../img/hand-stop.svg);
+  background-size: contain;
+  opacity: 0.75;
+  transform: translate(0, -50%);
+  animation-duration: 4s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+}
+
+.problems-card2-user-item:nth-child(1)::after {
+  animation-name: moveAB_hand_1;
+}
+
+.problems-card2-user-item:nth-child(2)::after {
+  animation-name: moveAB_hand_2;
+}
+
+.problems-card2-user-item:nth-child(3)::after {
+  animation-name: moveAB_hand_3;
 }
 
 .problems-card2-user-item svg {
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
+}
+
+@keyframes moveAB_hand_1 {
+  0% {
+    transform: translate(-100px, 40px);
+  }
+  50% {
+    transform: translate(0, -50%);
+  }
+  100% {
+    transform: translate(0, -50%);
+  }
+}
+
+@keyframes moveAB_hand_2 {
+  0% {
+    transform: translate(-100px, -50%);
+  }
+  50% {
+    transform: translate(0, -50%);
+  }
+  100% {
+    transform: translate(0, -50%);
+  }
+}
+
+@keyframes moveAB_hand_3 {
+  0% {
+    transform: translate(-100px, -65px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(0, -50%);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(0, -50%);
+    opacity: 0.75;
+  }
 }
 
 @keyframes euro_1_Movement {
