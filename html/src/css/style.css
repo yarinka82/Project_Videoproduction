@@ -8,5 +8,6 @@
 @import url('./our_company.css');
 @import url('./faq.css');
 @import url('./footer.css');
-@import url('./slaider.css');
+@import url("./slaider.css");
 @import url('./problems.css');
+@import url('./impressum.css');
