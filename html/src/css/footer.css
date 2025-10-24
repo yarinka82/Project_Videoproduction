@@ -32,7 +32,6 @@
 .footer-logo-div {
     display: flex;
     justify-content: center;
-    background-color: var(--color-text-primary);
     border-radius: 8px;
 }
 
