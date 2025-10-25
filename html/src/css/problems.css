@@ -1,8 +1,3 @@
-:root {
-  --hand-animation-duration: 4s;
-  --hand-animation-delay: 3s;
-}
-
 .problem-card {
   position: relative;
   overflow: hidden;
@@ -361,31 +356,29 @@
 .problems-card2-user-item::after {
   position: absolute;
   top: 50%;
-  left: -20px;
+  left: -24px;
   display: block;
   content: '';
-  width: 20px;
-  height: 20px;
-
-  background-image: url(../img/hand-stop.svg);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-image: url(../img/hand-stop.svg),
+    linear-gradient(135deg, rgb(61, 61, 61) 0%, rgb(17, 17, 17) 100%);
   background-size: contain;
-  opacity: 0.75;
+  opacity: 0;
   transform: translate(0, -50%);
-  animation-duration: var(--hand-animation-duration);
-  animation-delay: var(--hand-animation-delay);
-  animation-iteration-count: infinite;
 }
 
 .problems-card2-user-item:nth-child(1)::after {
-  animation-name: moveAB_hand_1;
+  animation: moveAB_hand_1 6s ease infinite -3s;
 }
 
 .problems-card2-user-item:nth-child(2)::after {
-  animation-name: moveAB_hand_2;
+  animation: moveAB_hand_2 6s ease infinite -1s;
 }
 
 .problems-card2-user-item:nth-child(3)::after {
-  animation-name: moveAB_hand_3;
+  animation: moveAB_hand_3 6s ease infinite -2s;
 }
 
 .problems-card2-user-item svg {
@@ -486,24 +479,44 @@
 @keyframes moveAB_hand_1 {
   0% {
     transform: translate(-100px, 40px);
+    opacity: 0;
   }
-  50% {
+  25% {
+    opacity: 0.7;
+  }
+  40% {
     transform: translate(0, -50%);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translate(0, -50%);
+    opacity: 0;
   }
   100% {
     transform: translate(0, -50%);
+    opacity: 0;
   }
 }
 
 @keyframes moveAB_hand_2 {
   0% {
     transform: translate(-100px, -50%);
+    opacity: 0;
   }
-  50% {
+  25% {
+    opacity: 0.7;
+  }
+  40% {
     transform: translate(0, -50%);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translate(0, -50%);
+    opacity: 0;
   }
   100% {
     transform: translate(0, -50%);
+    opacity: 0;
   }
 }
 
@@ -512,16 +525,20 @@
     transform: translate(-100px, -65px);
     opacity: 0;
   }
-  20% {
+  25% {
     opacity: 0.7;
   }
-  50% {
+  40% {
     transform: translate(0, -50%);
     opacity: 0.7;
+  }
+  75% {
+    transform: translate(0, -50%);
+    opacity: 0;
   }
   100% {
     transform: translate(0, -50%);
-    opacity: 0.75;
+    opacity: 0;
   }
 }
 
