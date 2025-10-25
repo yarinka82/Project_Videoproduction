@@ -470,7 +470,7 @@
 
 @keyframes change_color_1 {
   0% {
-    color: #66cbff;
+    color: var(--token-eb7b6d97-3952-433e-81bb-c192cbbf1822);
     border-color: rgba(102, 203, 255, 0.5);
   }
   33% {
