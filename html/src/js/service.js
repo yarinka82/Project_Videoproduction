@@ -1,4 +1,4 @@
-export const baseUrl = "https://videoproduction.onrender.com";
+export const baseUrl = 'https://videoproduction.onrender.com';
 const BASE_URL = `${baseUrl}/api`;
 
 export async function getApi(endpoint, baseList, options = {}) {
@@ -15,7 +15,7 @@ export async function getApi(endpoint, baseList, options = {}) {
 
   const defaultOptions = {
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     ...options,
   };
@@ -38,7 +38,7 @@ export async function getApi(endpoint, baseList, options = {}) {
       return { list: baseList, pagination };
     }
   } catch (error) {
-    console.log("🚀 ~ getApi ~ error:", error);
+    console.log('🚀 ~ getApi ~ error:', error);
     return { list: baseList, pagination };
   }
 }
