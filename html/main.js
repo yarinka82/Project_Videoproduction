@@ -8,10 +8,12 @@ import { initFaq } from './src/js/faq/faq.js';
 import { initPortfolio } from './src/js/slaider/portfolio.js';
 import { btnRedirect } from './src/js/utils/btnRedirect.js';
 import { baseUrl } from './src/js/service.js';
+import { makeProblemsSectionMarkup } from './src/js/problems/makeProblemsSection.js';
 
 // Partials bundlingh
 await loadHTML(BLOCK_TYPE.HEADER, './src/partials/header.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/hero.html');
+await loadHTML(BLOCK_TYPE.SECTION, './src/partials/problems.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/advantages.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/portfolio.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/our_company.html');
@@ -23,6 +25,7 @@ await loadHTML(BLOCK_TYPE.FOOTER, './src/partials/footer.html');
 onHeaderLoad();
 
 // Section rendering
+makeProblemsSectionMarkup('problems-glr', './src/template/problems-cards.hbs');
 makeAdvantagesSectionMarkup(
   'advantages-glr',
   './src/template/advantage-cards.hbs'

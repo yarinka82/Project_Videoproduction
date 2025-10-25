@@ -1,5 +1,5 @@
 import { cards } from '../../../db/data.js';
-import loadTemplate from './loadTemplate.js';
+import loadTemplate from '../common/loadTemplate.js';
 import addMarkup from './addMarkup.js';
 import { startObserver } from '../common/observer.js';
 
