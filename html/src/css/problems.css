@@ -1,3 +1,13 @@
+:root {
+  --hands-icons-shift-x: -80px;
+}
+
+@media screen and (min-width: 400px) {
+  :root {
+    --hands-icons-shift-x: -100px;
+  }
+}
+
 .problem-card {
   position: relative;
   overflow: hidden;
@@ -102,61 +112,6 @@
   font-weight: var(--fw-medium);
   line-height: 1.4;
   text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-  .problems-gallery {
-    margin-bottom: 120px;
-  }
-
-  .problems-list {
-    max-width: 680px;
-  }
-
-  .problem-card {
-    padding-top: 42px;
-    padding-bottom: 42px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .problems-title {
-    display: block;
-
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-title);
-    text-align: center;
-  }
-
-  .problems-gallery {
-    display: block;
-  }
-
-  .problems-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 16px;
-    max-width: 100%;
-  }
-
-  .problems-list-item {
-    flex: 1 1 350px;
-    opacity: 0;
-    transform: translateY(200px);
-    transition: all 0.6s ease-out;
-  }
-
-  .problems-list-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .problems-list-item:not(:last-child) {
-    margin-bottom: 0;
-  }
 }
 
 .problems-card1-img-thumb {
@@ -345,14 +300,6 @@
   transform: rotate(180deg);
 }
 
-.problems-card2-user-item:nth-child(1)::before {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 160px;
-  transform: rotate(155deg);
-}
-
 .problems-card2-user-item::after {
   position: absolute;
   top: 50%;
@@ -461,6 +408,82 @@
   height: 14px;
 }
 
+@media screen and (max-width: 400px) {
+  .problems-card2-user-list {
+    right: 24px;
+  }
+
+  .problems-card2-user-item:nth-child(1)::before {
+    width: 140px;
+    transform: rotate(150deg);
+  }
+
+  .problems-card2-user-item:nth-child(2)::before {
+    width: 130px;
+    transform: rotate(180deg);
+  }
+
+  .problems-card2-user-item:nth-child(3)::before {
+    width: 140px;
+    transform: rotate(210deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .problems-gallery {
+    margin-bottom: 120px;
+  }
+
+  .problems-list {
+    max-width: 680px;
+  }
+
+  .problem-card {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .problems-title {
+    display: block;
+
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-title);
+    text-align: center;
+  }
+
+  .problems-gallery {
+    display: block;
+  }
+
+  .problems-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .problems-list-item {
+    flex: 1 1 350px;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 0.6s ease-out;
+  }
+
+  .problems-list-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .problems-list-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
 @keyframes change_color_1 {
   0% {
     color: var(--token-eb7b6d97-3952-433e-81bb-c192cbbf1822);
@@ -478,7 +501,7 @@
 
 @keyframes moveAB_hand_1 {
   0% {
-    transform: translate(-100px, 40px);
+    transform: translate(var(--hands-icons-shift-x), 40px);
     opacity: 0;
   }
   25% {
@@ -500,7 +523,7 @@
 
 @keyframes moveAB_hand_2 {
   0% {
-    transform: translate(-100px, -50%);
+    transform: translate(var(--hands-icons-shift-x), -50%);
     opacity: 0;
   }
   25% {
@@ -522,7 +545,7 @@
 
 @keyframes moveAB_hand_3 {
   0% {
-    transform: translate(-100px, -65px);
+    transform: translate(var(--hands-icons-shift-x), -65px);
     opacity: 0;
   }
   25% {
