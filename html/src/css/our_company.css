@@ -2,7 +2,7 @@
   background-color: var(--bgcolor-secondary);
   color: var(--color-text-white);
   padding: 80px 0;
-  /* text-align: center; */
+
   overflow: hidden;
 }
 
@@ -16,6 +16,7 @@
   font-weight: var(--fw-bold);
   margin-bottom: 60px;
   color: var(--color-text-white);
+  text-align: center;
 }
 
 .our_company-list {
@@ -79,6 +80,7 @@
   }
 
   .our_company-card {
-    width: 300px;
+    /* width: 300px; */
+    max-width: 320px;
   }
 }

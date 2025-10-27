@@ -22,11 +22,14 @@ await loadHTML(BLOCK_TYPE.SECTION, './src/partials/faq.html');
 await loadHTML(BLOCK_TYPE.FOOTER, './src/partials/footer.html');
 
 // Header
-onHeaderLoad()
+onHeaderLoad();
 
 // Section rendering
 makeProblemsSectionMarkup('problems-glr', './src/template/problems-cards.hbs');
-makeAdvantagesSectionMarkup('advantages-glr', './src/template/advantage-cards.hbs');
+makeAdvantagesSectionMarkup(
+  'advantages-glr',
+  './src/template/advantage-cards.hbs'
+);
 
 // Portfolio
 fetchVideos();
