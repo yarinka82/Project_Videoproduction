@@ -6,6 +6,7 @@ body {
   font-weight: var(--fw-medium);
   background-color: var(--bgcolor-primary);
   color: var(--color-text-primary);
+  overflow-x: hidden;
 }
 
 /* === Fonts Variables === */
