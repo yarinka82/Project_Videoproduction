@@ -480,7 +480,7 @@
 
 @keyframes moveAB_hand_1 {
   0% {
-    transform: translate(var(--hands-icons-shift-x), 40px);
+    transform: translate(-80px, 40px);
     opacity: 0;
   }
   25% {
