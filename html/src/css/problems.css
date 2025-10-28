@@ -1,11 +1,7 @@
-:root {
-  --hands-icons-shift-x: -80px;
-}
-
-@media screen and (min-width: 400px) {
-  :root {
-    --hands-icons-shift-x: -100px;
-  }
+.problems-section-container {
+  padding-top: 42px;
+  padding-bottom: 128px;
+  background-image: var(--section-bg-color-grey);
 }
 
 .problem-card {
@@ -55,7 +51,7 @@
 .problems-gallery {
   display: flex;
   justify-content: center;
-  margin-bottom: 64px;
+  margin-bottom: 128px;
 }
 
 .problems-list {
@@ -252,7 +248,7 @@
 .problems-card2-user-list {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -281,22 +277,23 @@
   left: 0;
   display: block;
   content: '';
-  width: 160px;
-  height: 0px;
+  /* width: 160px; */
+  width: 140px;
+  height: 0;
   border-top: 1px solid var(--token-8967b5b7-ba7d-4206-8bde-e6f934ca98d8);
   transform-origin: left center;
 }
 
 .problems-card2-user-item:nth-child(1)::before {
-  transform: rotate(155deg);
+  transform: rotate(150deg);
 }
 
 .problems-card2-user-item:nth-child(3)::before {
-  transform: rotate(205deg);
+  transform: rotate(210deg);
 }
 
 .problems-card2-user-item:nth-child(2)::before {
-  width: 150px;
+  width: 130px;
   transform: rotate(180deg);
 }
 
@@ -408,27 +405,6 @@
   height: 14px;
 }
 
-@media screen and (max-width: 400px) {
-  .problems-card2-user-list {
-    right: 24px;
-  }
-
-  .problems-card2-user-item:nth-child(1)::before {
-    width: 140px;
-    transform: rotate(150deg);
-  }
-
-  .problems-card2-user-item:nth-child(2)::before {
-    width: 130px;
-    transform: rotate(180deg);
-  }
-
-  .problems-card2-user-item:nth-child(3)::before {
-    width: 140px;
-    transform: rotate(210deg);
-  }
-}
-
 @media screen and (min-width: 768px) {
   .problems-gallery {
     margin-bottom: 120px;
@@ -462,7 +438,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 16px;
     max-width: 100%;
   }
@@ -523,7 +499,7 @@
 
 @keyframes moveAB_hand_2 {
   0% {
-    transform: translate(var(--hands-icons-shift-x), -50%);
+    transform: translate(-80px, -50%);
     opacity: 0;
   }
   25% {
@@ -545,7 +521,7 @@
 
 @keyframes moveAB_hand_3 {
   0% {
-    transform: translate(var(--hands-icons-shift-x), -65px);
+    transform: translate(-80px, -65px);
     opacity: 0;
   }
   25% {

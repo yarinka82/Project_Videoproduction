@@ -84,6 +84,12 @@ body {
     rgba(0, 153, 255, 0.6) 0%,
     rgba(18, 18, 18, 0) 100%
   );
+
+  --section-bg-color-grey:  background-image: linear-gradient(
+    180deg,
+    var(--token-9c682c5f-cdc7-48a3-8e8c-85c4246e47a4, #fff) 0%,
+    var(--token-5a64587c-3031-4427-b612-7af2d247be89, #f3f4f6) 100%
+  ) ;
 }
 
 /* === Base Colors === */
