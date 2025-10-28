@@ -413,10 +413,6 @@
     margin-bottom: 120px;
   }
 
-  .problems-list {
-    max-width: 680px;
-  }
-
   .problem-card {
     padding-top: 42px;
     padding-bottom: 42px;
@@ -441,7 +437,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
-    /* flex-wrap: wrap; */
     gap: 16px;
     max-width: 100%;
   }
@@ -460,6 +455,10 @@
 
   .problems-list-item:not(:last-child) {
     margin-bottom: 0;
+  }
+
+  .problems-card-title {
+    min-height: 80px;
   }
 }
 
