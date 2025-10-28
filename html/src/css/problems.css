@@ -1,7 +1,10 @@
+.problems {
+  background-image: var(--section-bg-color-grey);
+}
+
 .problems-section-container {
   padding-top: 42px;
   padding-bottom: 128px;
-  background-image: var(--section-bg-color-grey);
 }
 
 .problem-card {
