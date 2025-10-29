@@ -16,6 +16,7 @@
   font-weight: var(--fw-bold);
   margin-bottom: 60px;
   color: var(--color-text-white);
+  text-shadow: 0 0 18px var(--token-eb7b6d97-3952-433e-81bb-c192cbbf1822);
   text-align: center;
 }
 
@@ -36,7 +37,7 @@
 
 .our_company-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 170, 255, 0.4);
+  box-shadow: 0 0 20px rgb(238, 93, 219);
 }
 
 .our_company-image {
@@ -44,7 +45,7 @@
   height: 260px;
   border-radius: 10px;
   object-fit: cover;
-  border: 2px solid rgba(0, 170, 255, 0.4);
+  border: 2px solid rgba(116, 0, 211, 0.61);
   margin-bottom: 20px;
 }
 
