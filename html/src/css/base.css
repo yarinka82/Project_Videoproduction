@@ -95,7 +95,8 @@ body {
 
   /* Fonts colors */
 
-  --color-text-primary: #9ca3af; /* <p> */
+  --color-text-primary: #da96cb; /* <p> */
+  /* --color-text-primary: #9ca3af; <p> */
   --color-text-secondary: #f4f4f6; /* <h3> */
   --color-text-black: #000; /* <h2> */
   --color-text-white: #fff; /* <h1> */
@@ -108,7 +109,8 @@ body {
 
 :root {
   --token-483c395d-98a5-4c23-af29-bea72908e92b: #f9fafb;
-  --token-a235945a-b267-4393-9124-089017da9783: #0086cb;
+  --token-a235945a-b267-4393-9124-089017da9783: #c68ee6dc;
+  /* --token-a235945a-b267-4393-9124-089017da9783: #0086cb; */
   --token-ee60a235-947f-476b-81dc-1834f1af0b3a: #111827;
   --token-6aa2c91d-3eef-4470-885f-78bce3b1b77d: #374151;
   --token-5eca0a17-f797-456c-bac5-efdeaeff0c0b: #e5e7eb;
@@ -119,7 +121,8 @@ body {
   --token-448be32f-5ce2-4083-9bd4-714d017438ce: #ff9700;
   --token-96e3aee0-df31-47ca-b20e-57841f0289ac: #f3b102;
   --token-35c72760-ab33-4607-b96d-ed9b98f8a0d9: #0090da;
-  --token-eb7b6d97-3952-433e-81bb-c192cbbf1822: #66cbff;
+  --token-eb7b6d97-3952-433e-81bb-c192cbbf1822: #ee5ddb;
+  /* --token-eb7b6d97-3952-433e-81bb-c192cbbf1822: #66cbff; */
   --token-c6e98fbd-6551-4a23-b582-f27b355c7007: #004c94;
   --token-8967b5b6-ba7c-4206-8bde-e6f934ca98d8: #09f;
   --token-8967b5b7-ba7d-4206-8bde-e6f934ca98d8: #262626;

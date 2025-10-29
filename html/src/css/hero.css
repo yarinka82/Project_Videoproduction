@@ -2,23 +2,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 100px;
+  padding: 80px 20px 40px 20px;
   background-color: var(--bgcolor-secondary);
   color: var(--color-text-white);
-  min-height: 100vh;
   position: relative;
   overflow: hidden;
   font-family: var(--font-family);
 }
 
-/* ===== LEFT BLOCK ===== */
+/*  LEFT BLOCK  */
 .hero-content {
   max-width: 50%;
   z-index: 2;
 }
 
 .hero-title {
-  font-size: 56px;
+  font-size: 26px;
   line-height: 1.2;
   font-weight: var(--fw-bold);
   margin-bottom: 20px;
@@ -37,7 +36,7 @@
   max-width: 540px;
 }
 
-/* ===== FORMULAR LINK ===== */
+/*  FORMULAR LINK  */
 .formular-link {
   position: relative;
   display: inline-flex;
@@ -88,26 +87,26 @@
   transform: translateX(8px);
 }
 
-/* ===== RIGHT BLOCK AS BACKGROUND ===== */
+/*  RIGHT BLOCK AS BACKGROUND  */
 .hero-video {
   position: relative;
   max-width: 45%;
   width: 45%;
-  height: 500px;
+  height: 250px;
   background-image: url('../img/hero.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 12px;
-  box-shadow: 0 0 30px rgba(0, 153, 255, 0.3);
+  box-shadow: 0 0 30px rgba(238, 183, 238, 0.863);
 }
 
-/* ===== PLAY BUTTON ===== */
+/* PLAY BUTTON  */
 .hero-play {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 153, 255, 0.25);
+  background: rgba(228, 55, 190, 0.274);
   border: 2px solid var(--token-a235945a-b267-4393-9124-089017da9783);
   width: 80px;
   height: 80px;
@@ -123,14 +122,14 @@
 }
 
 .hero-play:hover {
-  background: rgba(0, 153, 255, 0.5);
+  background: rgba(255, 166, 0, 0.5);
 }
 
-/* ===== PULSE ANIMATION ===== */
+/*  PULSE ANIMATION  */
 @keyframes pulse {
   0% {
     transform: translate(-50%, -50%) scale(1);
-    box-shadow: 0 0 0 0 rgba(0, 153, 255, 0.5);
+    box-shadow: 0 0 0 0 rgba(232, 164, 241, 0.37);
   }
   70% {
     transform: translate(-50%, -50%) scale(1.05);
@@ -142,12 +141,12 @@
   }
 }
 
-/* ===== MEDIA ===== */
+/*  Responsive */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 40px 40px;
+    padding: 80px 40px 50px;
   }
 
   .hero-content {
@@ -166,16 +165,15 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (min-width: 1280px) {
   .hero {
-    padding: 30px 20px;
+    padding: 140px 100px;
   }
-
   .hero-title {
-    font-size: 26px;
+    font-size: 56px;
   }
 
   .hero-video {
-    height: 250px;
+    height: 500px;
   }
 }
