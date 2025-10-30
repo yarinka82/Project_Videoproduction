@@ -1,5 +1,6 @@
 .advantages {
   background-color: var(--token-5a64587c-3031-4427-b612-7af2d247be89);
+  overflow-x: hidden;
 }
 
 .advantages-section-container {
