@@ -141,6 +141,7 @@
   position: relative;
   padding-left: 12px;
   font-size: 8px;
+  line-height: 1.4;
   color: var(--color-header-adress-txt);
 }
 
