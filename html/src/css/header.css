@@ -228,9 +228,4 @@
     height: 70%;
     transform: translateY(-50%);
   }
-
-  .header-contacts-link::before {
-    width: 12px;
-    height: 12x;
-  }
 }
