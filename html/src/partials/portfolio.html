@@ -1,6 +1,8 @@
-<section class="portfolio">
+<section id="portfolio" class="portfolio">
   <div class="portfolio-info">
-    <h3 class="portfolio-title">Beispiele aus der Praxis</h3>
+    <p class="portfolio-title direct" data-endpoint="video/video">
+      Beispiele aus der Praxis
+    </p>
     <h2 class="portfolio-subtitle">So sehen <span>One Lean Filme</span> aus</h2>
     <p class="portfolio-description">
       Unsere One Lean Filme kombinieren <strong>kreative Exzellenz</strong> mit
@@ -12,11 +14,23 @@
     </p>
   </div>
   <div class="gallery-container">
-    <button type="button" class="gallery-dropdown">
-      <span class="gallery-dropdown-title">Klicke hier für mehr Videos</span>
-    </button>
+    <div class="gallery-dropdown-container">
+      <button
+        type="button"
+        class="gallery-dropdown-button"
+        id="categories-button"
+      >
+        <span class="gallery-dropdown-title">Klicke hier für mehr Videos</span>
+      </button>
+      <ul class="gallery-categories hidden" id="video-categories"></ul>
+    </div>
 
     <ul class="gallery-list" id="videos"></ul>
+    <div id="pagination">
+      <button class="formular-link" id="portfolio-prev-btn">← Prev</button>
+      <div id="portfolio-dots"></div>
+      <button class="formular-link" id="portfolio-next-btn">Next →</button>
+    </div>
   </div>
   <a href="/formular" class="formular-link">
     <span class="formular-link-title">Jetzt Erstgespräch vereinbaren</span>
