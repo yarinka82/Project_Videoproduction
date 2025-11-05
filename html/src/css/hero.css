@@ -10,6 +10,20 @@
   font-family: var(--font-family);
 }
 
+/* .hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%; /* правая часть */
+  height: 100%;
+  background-image: url('../img/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 100px 0 100px rgba(0, 0, 0, 0.95); /* затемнение слева */
+  z-index: 1;
+} */
+
 /*  LEFT BLOCK  */
 .hero-content {
   max-width: 50%;
@@ -17,7 +31,7 @@
 }
 
 .hero-title {
-  font-size: 26px;
+  font-size: var(--fs-title);
   line-height: 1.2;
   font-weight: var(--fw-bold);
   margin-bottom: 20px;
@@ -30,10 +44,21 @@
 
 .hero-text {
   margin: 25px 0 40px;
-  font-size: var(--fs-normal);
+  font-size: 16px;
+  font-weight: var(--fw-medium);
   line-height: 1.7;
   color: var(--color-text-primary);
   max-width: 540px;
+}
+
+.hero-subtitle {
+  font-size: var(--fs-secondary);
+  line-height: 1.4;
+  font-weight: var(--fw-semiBold);
+  color: var(--color-text-white);
+  max-width: 540px;
+  margin-bottom: 40px;
+  text-shadow: 0 0 18px var(--token-96e3aee0-df31-47ca-b20e-57841f0289ac);
 }
 
 /*  FORMULAR LINK  */
@@ -92,12 +117,12 @@
   position: relative;
   max-width: 45%;
   width: 45%;
-  height: 250px;
+  height: 450px;
   background-image: url('../img/hero.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 12px;
-  box-shadow: 0 0 30px rgba(238, 183, 238, 0.863);
+  box-shadow: 0 0 40px rgba(238, 183, 238, 0.863);
 }
 
 /* PLAY BUTTON  */
@@ -153,15 +178,24 @@
     max-width: 90%;
   }
 
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-text {
+    font-size: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 38px;
+    margin-bottom: 60px;
+  }
+
   .hero-video {
     max-width: 90%;
     width: 90%;
-    margin-top: 30px;
+    margin-top: 40px;
     height: 300px;
-  }
-
-  .hero-title {
-    font-size: 32px;
   }
 }
 
@@ -171,6 +205,14 @@
   }
   .hero-title {
     font-size: 56px;
+  }
+
+  .hero-text {
+    font-size: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 42px;
   }
 
   .hero-video {
