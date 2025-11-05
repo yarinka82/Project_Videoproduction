@@ -73,6 +73,10 @@
     font-weight: var(--fw-medium);
 }
 
+.desktop-line-divider {
+    display: none;
+}
+
 @media screen and (min-width: 810px) {
     .footer-grid-container {
         grid-template-rows: auto;
@@ -99,6 +103,10 @@
     .footer-logo-img {
         height: 80px;
     }
+
+    .desktop-line-divider {
+        display: flex;
+    }
 }
 
 .icons-sprite {
@@ -121,4 +129,9 @@
 
 .icon-youtube {
     background-position: -125px -8px;
+}
+
+.it-hub-font {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-variant: small-caps;
 }
