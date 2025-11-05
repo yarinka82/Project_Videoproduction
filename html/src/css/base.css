@@ -84,15 +84,18 @@ body {
   --problems-card1-thumb-bg-color: radial-gradient(
     50% 31% at 50% 100%,
     rgba(255, 0, 76, 0.6) 0%,
-    /* rgba(0, 153, 255, 0.6) 0%, */ rgba(18, 18, 18, 0) 100%
+    /* rgba(0, 153, 255, 0.6) 0%, */ rgb(43, 42, 42) 100%
+      /* rgba(17, 17, 17, 0) 100% */
   );
 }
 
 /* === Base Colors === */
 :root {
   /* Background colors */
-  --bgcolor-primary: #fbfbfb;
-  --bgcolor-secondary: #000;
+  --bgcolor-primary: #c5bebe;
+  /* --bgcolor-primary: #fbfbfb; */
+  --bgcolor-secondary: #3b3939;
+  /* --bgcolor-secondary: #000; */
   --header-bg-color: rgba(17, 24, 38, 0.73);
 
   /* Fonts colors */
