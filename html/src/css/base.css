@@ -18,8 +18,9 @@ body {
   --fs-primary: 14px; /* <p> */
   --fs-normal: 16px; /* <p normal> */
   --fs-big: 18px; /* <p big> */
-  --fs-secondary: 24px; /* <h3> */
-  --fs-title: 36px; /* <h2> */
+  --fs-title: 36px; /* <h1> */
+  --fs-subtitle: 32px; /* <h2> */
+  --fs-secondary: 28px; /* <h3> */
 
   @media only screen and (min-width: 768px) {
     --fs-title: 56px;
@@ -27,7 +28,11 @@ body {
 
   /*Fonts weights*/
   --fw-medium: 500; /* <p> */
+<<<<<<< HEAD
+  --fw-semiBold: 600; /* <h2>, <h3> */
+=======
   --fw-semiBold: 600; /* <h2> <h3> */
+>>>>>>> origin
   --fw-bold: 700;
   --fw-extraBold: 900;
 
@@ -130,8 +135,13 @@ body {
   --token-fe970af2-997a-4c76-8490-61d4a6bcf24f: #9ca3af;
   --token-5a64587c-3031-4427-b612-7af2d247be89: #f3f4f6;
   --token-9c682c5f-cdc7-48a3-8e8c-85c4246e47a4: #fff;
+<<<<<<< HEAD
+  --token-448be32f-5ce2-4083-9bd4-714d017438ce: #ff9700;
+  --token-96e3aee0-df31-47ca-b20e-57841f0289ac: #f1732a;
+=======
   --token-448be32f-5ce2-4083-9bd4-714d017438ce: #f39b18;
   --token-96e3aee0-df31-47ca-b20e-57841f0289ac: #f3b102;
+>>>>>>> origin
   --token-35c72760-ab33-4607-b96d-ed9b98f8a0d9: #0090da;
   --token-eb7b6d97-3952-433e-81bb-c192cbbf1822: #f1611e;
   /* --token-eb7b6d97-3952-433e-81bb-c192cbbf1822: #66cbff; */
@@ -169,8 +179,8 @@ html {
 }
 
 h2 {
-  font-size: var(--fs-title);
-  font-weight: var(--fw-bold);
+  font-size: var(--fs-subtitle);
+  font-weight: var(--fw-semiBold);
 }
 
 h4 {
