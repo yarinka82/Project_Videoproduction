@@ -1,6 +1,4 @@
-export function fixHeaderPosition() {
-  const headerRef = document.getElementById('header');
-
+export function fixHeaderPosition(headerRef) {
   if (!headerRef) return;
 
   if (window.innerWidth >= 1200) {
