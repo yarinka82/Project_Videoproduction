@@ -10,7 +10,7 @@
   padding: 64px 0;
   position: relative;
   overflow: visible;
-  background-color: #fff;
+  background-color: var(--bgcolor-primary);
 
   @media (min-width: 780px) {
     gap: 70px;
