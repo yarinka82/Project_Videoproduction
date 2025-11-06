@@ -17,7 +17,6 @@ await loadHTML(BLOCK_TYPE.SECTION, './src/partials/problems.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/advantages.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/portfolio.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/our_company.html');
-await loadHTML(BLOCK_TYPE.SECTION, './src/partials/blog.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/faq.html');
 await loadHTML(BLOCK_TYPE.FOOTER, './src/partials/footer.html');
 
