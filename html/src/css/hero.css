@@ -15,12 +15,12 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 55%; /* правая часть */
+  width: 55%; 
   height: 100%;
   background-image: url('../img/hero.jpg');
   background-size: cover;
   background-position: center;
-  box-shadow: inset 100px 0 100px rgba(0, 0, 0, 0.95); /* затемнение слева */
+  box-shadow: inset 100px 0 100px rgba(0, 0, 0, 0.95); 
   z-index: 1;
 } */
 
@@ -133,8 +133,8 @@
   transform: translate(-50%, -50%);
   background: rgba(228, 55, 190, 0.274);
   border: 2px solid var(--token-a235945a-b267-4393-9124-089017da9783);
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
