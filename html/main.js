@@ -9,6 +9,7 @@ import { initPortfolio } from './src/js/slaider/portfolio.js';
 import { btnRedirect } from './src/js/utils/btnRedirect.js';
 import { baseUrl } from './src/js/service.js';
 import { makeProblemsSectionMarkup } from './src/js/problems/makeProblemsSection.js';
+import { flipWorkStepCard } from './src/js/work-steps/flipWorkStepCard.js'
 
 // Partials bundlingh
 await loadHTML(BLOCK_TYPE.HEADER, './src/partials/header.html');
@@ -16,6 +17,7 @@ await loadHTML(BLOCK_TYPE.SECTION, './src/partials/hero.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/problems.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/advantages.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/portfolio.html');
+await loadHTML(BLOCK_TYPE.SECTION, './src/partials/work_steps.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/our_company.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/faq.html');
 await loadHTML(BLOCK_TYPE.FOOTER, './src/partials/footer.html');
@@ -41,3 +43,6 @@ setTimeout(() => {
 
 const buttons = document.querySelectorAll('.direct');
 btnRedirect(buttons, baseUrl);
+
+//Work steps section
+flipWorkStepCard();
