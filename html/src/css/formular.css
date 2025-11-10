@@ -1,41 +1,41 @@
 .form-container {
-    width: 100%;
-    padding: 35px;
-    border-radius: 16px;
+  width: 100%;
+  padding: 35px;
+  border-radius: 16px;
 }
 
 .input-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 0.875rem; /* text-sm */
-    font-weight: 600;
-    color: #FFFFFF;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 600;
+  color: #ffffff;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
-    width: 100%;
-    padding: 12px;
-    background-color: var(--token-6aa2c91d-3eef-4470-885f-78bce3b1b77d);
-    border: 1px solid white;
-    color: white;
-    border-radius: 10px;
-    transition: border-color 0.2s, box-shadow 0.2s;
+input[type='text'],
+input[type='email'],
+input[type='tel'] {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--token-6aa2c91d-3eef-4470-885f-78bce3b1b77d);
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 textarea {
   width: 100%;
   padding: 12px;
-  background-color: var(--token-6aa2c91d-3eef-4470-885f-78bce3b1b77d); 
+  background-color: var(--token-6aa2c91d-3eef-4470-885f-78bce3b1b77d);
   border: 1px solid white;
   color: white;
   border-radius: 10px;
-  resize: vertical; 
+  resize: vertical;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
@@ -45,60 +45,58 @@ textarea::placeholder {
 
 textarea:focus {
   outline: none;
-  border-color: var(--token-a235945a-b267-4393-9124-089017da9783); 
+  border-color: var(--token-a235945a-b267-4393-9124-089017da9783);
   box-shadow: 0 0 0 3px rgba(0, 134, 203, 0.4); /* Glow effect on focus */
 }
 
-
 input::placeholder {
-    color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 input:focus {
-    outline: none;
-    border-color: var(--token-a235945a-b267-4393-9124-089017da9783);
-    box-shadow: 0 0 0 3px rgba(0, 134, 203, 0.4); /* Glow effect on focus */
+  outline: none;
+  border-color: var(--token-a235945a-b267-4393-9124-089017da9783);
+  box-shadow: 0 0 0 3px rgba(0, 134, 203, 0.4); /* Glow effect on focus */
 }
 
 /* ---------------------------------- */
 /* CTA BUTTON */
 /* ---------------------------------- */
 .cta-button {
-    width: 100%;
-    margin-top: 20px;
-    padding: 15px;
-    font-size: 1.125rem;
-    font-weight: 700;
-    background-color: var(--token-a235945a-b267-4393-9124-089017da9783);
-    color: var(--color-background-dark); 
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    color: #FFFFFF;
-    box-shadow: 0 0 0 3px rgba(0, 134, 203, 0.4); /* Glow effect on focus */
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  background-color: var(--token-a235945a-b267-4393-9124-089017da9783);
+  color: var(--color-background-dark);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 134, 203, 0.4); /* Glow effect on focus */
 
-    transition: background-color 0.2s, transform 0.2s;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 .cta-button:hover {
-    background-color: var(--token-35c72760-ab33-4607-b96d-ed9b98f8a0d9); 
-    transform: translateY(-2px);
+  background-color: var(--token-35c72760-ab33-4607-b96d-ed9b98f8a0d9);
+  transform: translateY(-2px);
 }
 
-
 .modal {
-  position: fixed;
+  /* position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; */
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  opacity: 0;
-  pointer-events: none;
+  /* opacity: 0; */
+  /* pointer-events: none; */
   transition: opacity 0.3s ease;
 }
 
@@ -111,8 +109,9 @@ input:focus {
   background-color: rgb(17, 17, 17);
   padding: 35px;
   border-radius: 16px;
-  max-width: 500px;
-  width: 90%;
+  /* max-width: 500px; */
+  /* width: 90%; */
+  width: 100%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   position: relative;
   transform: scale(0.9);
@@ -123,10 +122,9 @@ input:focus {
   transform: scale(1);
 }
 
-
-.modal-hidden {
+/* .modal-hidden {
   display: none;
-}
+} */
 
 .close-button {
   position: absolute;
