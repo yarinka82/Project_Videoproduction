@@ -1,4 +1,4 @@
-import { BLOCK_TYPE, BUNDLING_POSITION } from "./constants.js";
+import { BLOCK_TYPE, BUNDLING_POSITION } from './constants.js';
 
 export async function loadHTML(block_type, file) {
   const elWhereToAdd = document.getElementById('main');
@@ -9,7 +9,7 @@ export async function loadHTML(block_type, file) {
 
   let position = null;
 
-if (block_type === BLOCK_TYPE.HEADER) {
+  if (block_type === BLOCK_TYPE.HEADER) {
     position = BUNDLING_POSITION.BEFORE_BEGIN;
   } else if (block_type === BLOCK_TYPE.FOOTER) {
     position = BUNDLING_POSITION.AFTER_END;
@@ -17,5 +17,5 @@ if (block_type === BLOCK_TYPE.HEADER) {
     position = BUNDLING_POSITION.BEFORE_END;
   }
 
-  elWhereToAdd.insertAdjacentHTML(position, html)
+  elWhereToAdd.insertAdjacentHTML(position, html);
 }
