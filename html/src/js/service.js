@@ -1,5 +1,5 @@
 export const baseUrl = 'https://videoproduction.onrender.com';
-const BASE_URL = `${baseUrl}/api`;
+export const BASE_URL = `${baseUrl}/api`;
 
 export async function getApi(endpoint, baseList, options = {}) {
   const url = `${BASE_URL}${endpoint}`;

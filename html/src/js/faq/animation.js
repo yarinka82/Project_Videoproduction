@@ -8,5 +8,5 @@ export function animateSpark() {
     blocks[current].classList.remove('active');
     current = (current + 1) % blocks.length;
     animateSpark();
-  }, 1000);
+  }, 1500);
 }

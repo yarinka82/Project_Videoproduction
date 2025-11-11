@@ -6,7 +6,8 @@ from .models import FAQ
 
 @admin.register(FAQ)
 class FAQAdmin(SortableAdminMixin, admin.ModelAdmin):
-    list_display = ("question",)
+    list_display = ("order", "question",)
+    list_display_links = ("question",)
     list_editable = ("order",)
     search_fields = ("question", "answer")
     ordering = ("order",)
