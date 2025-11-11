@@ -28,6 +28,12 @@
 .work-steps-list-container {
     max-width: 400px;
     margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    list-style: none;
 }
 
 .work-steps-oneStep-card {
@@ -36,7 +42,7 @@
     background-image: var(--card-bg-color);
     border-radius: 24px;
     padding: 10px 30px;
-    margin: 20px auto;
+    margin: 10px auto;
     perspective: 1000px;
 }
 
@@ -54,6 +60,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,6 +74,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    min-height: 100%;
     backface-visibility: hidden;
     transform: rotateY(180deg);
 }
@@ -78,29 +86,14 @@
 
 .work-steps-oneStep-card.visible .work-steps-oneStep-card-inner {
     transform: rotateY(180deg);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
 }
 
-
-.work-steps-oneStep-card:nth-child(2) .work-steps-oneStep-card-inner {
-    transition-delay: 1s;
+.work-steps-oneStep-card .work-steps-oneStep-card-inner {
+    transition-delay: 0.9s;
 }
-
-.work-steps-oneStep-card:nth-child(3) .work-steps-oneStep-card-inner {
-    transition-delay: 2s;
-}
-
-.work-steps-oneStep-card:nth-child(4) .work-steps-oneStep-card-inner {
-    transition-delay: 3s;
-}
-
-.work-steps-oneStep-card:nth-child(5) .work-steps-oneStep-card-inner {
-    transition-delay: 4s;
-}
-
 
 .work-steps-oneStep-header-front {
-    /* height: 100%; */
     width: 100%;
     text-align: center;
     align-items: center;
@@ -150,6 +143,12 @@
     font-weight: var(--fw-semiBold);
 }
 
+@media screen and (max-width: 480px) {
+    .work-steps-oneStep-card {
+        height: 340px;
+    }
+}
+
 @media screen and (min-width: 900px) {
 
     .work-steps-section-container {
@@ -175,6 +174,22 @@
         width: 400px;
         margin: 10px 0;
         background-image: var(--card-bg-color);
+    }
+
+    .work-steps-oneStep-card:nth-child(2) .work-steps-oneStep-card-inner {
+        transition-delay: 1s;
+    }
+
+    .work-steps-oneStep-card:nth-child(3) .work-steps-oneStep-card-inner {
+        transition-delay: 1.8s;
+    }
+
+    .work-steps-oneStep-card:nth-child(4) .work-steps-oneStep-card-inner {
+        transition-delay: 2.5s;
+    }
+
+    .work-steps-oneStep-card:nth-child(5) .work-steps-oneStep-card-inner {
+        transition-delay: 3s;
     }
 
 }
