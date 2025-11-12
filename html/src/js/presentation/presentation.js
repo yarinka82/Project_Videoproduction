@@ -575,19 +575,19 @@ export async function initAnimation() {
     animationId = requestAnimationFrame(animate);
   }
   function cleanup() {
-    cancelAnimationFrame(animationId);
+    if (animationId) cancelAnimationFrame(animationId);
     animationId = null;
 
     window.removeEventListener('resize', updateLayout);
     window.removeEventListener('scroll', updateLayout);
 
-    socialContainer.replaceWith(socialContainer.cloneNode(true));
+    // Очищення соціального контейнера без втрати посилання
+    socialContainer.innerHTML = socialContainer.innerHTML;
 
+    // Скидання відео
     videos.forEach((video) => {
-      video.pause();
-      video.currentTime = 0;
-      video.removeEventListener('mouseenter', () => {});
-      video.removeEventListener('mouseleave', () => {});
+      const newVideo = video.cloneNode(true);
+      video.replaceWith(newVideo);
     });
 
     if (wave) {
@@ -595,7 +595,7 @@ export async function initAnimation() {
       wave = null;
     }
 
-    beams = [];
+    beams.length = 0;
   }
 
   positionIcons();
