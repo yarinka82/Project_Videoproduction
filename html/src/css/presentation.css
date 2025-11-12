@@ -8,13 +8,15 @@
   gap: 20px;
   width: 100%;
   height: min-content;
-  padding: 128px 0;
+  /* padding: 128px 0; */
   overflow: hidden;
   text-align: center;
 }
 
 .xmpr-container {
-  padding: 0 40px;
+  /* padding: 0 40px; */
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .xmpr-container {

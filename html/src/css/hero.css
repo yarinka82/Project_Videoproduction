@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 20px 40px 20px;
+  padding: 110px 20px;
   background-color: var(--bgcolor-secondary);
   color: var(--color-text-white);
   position: relative;
@@ -15,12 +15,12 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 55%; 
+  width: 55%;
   height: 100%;
   background-image: url('../img/hero.jpg');
   background-size: cover;
   background-position: center;
-  box-shadow: inset 100px 0 100px rgba(0, 0, 0, 0.95); 
+  box-shadow: inset 100px 0 100px rgba(0, 0, 0, 0.95);
   z-index: 1;
 } */
 
@@ -171,7 +171,7 @@
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 80px 40px 50px;
+    padding: 80px 40px;
   }
 
   .hero-content {

@@ -1,8 +1,8 @@
-.form-container {
+/* .form-container {
   width: 100%;
   padding: 35px;
   border-radius: 16px;
-}
+} */
 
 .formular-title {
   font-size: var(--fs-title);
@@ -122,7 +122,7 @@ input:focus {
   width: 100%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   position: relative;
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
   transition: transform 0.3s ease;
 }
 
