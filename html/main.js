@@ -10,6 +10,7 @@ import { btnRedirect } from './src/js/utils/btnRedirect.js';
 import { baseUrl } from './src/js/service.js';
 import { makeProblemsSectionMarkup } from './src/js/problems/makeProblemsSection.js';
 import { loadSvgSafely } from './src/js/presentation/presentation.js';
+import { flipWorkStepCard } from './src/js/work-steps/flipWorkStepCard.js'
 
 // Partials bundlingh
 await loadHTML(BLOCK_TYPE.HEADER, './src/partials/header.html');
@@ -18,6 +19,7 @@ await loadHTML(BLOCK_TYPE.SECTION, './src/partials/problems.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/presentation.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/advantages.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/portfolio.html');
+await loadHTML(BLOCK_TYPE.SECTION, './src/partials/work_steps.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/our_company.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/faq.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/formular.html');
@@ -45,3 +47,6 @@ setTimeout(() => {
 
 const buttons = document.querySelectorAll('.direct');
 btnRedirect(buttons, baseUrl);
+
+//Work steps section
+flipWorkStepCard();
