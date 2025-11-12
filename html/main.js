@@ -20,6 +20,7 @@ await loadHTML(BLOCK_TYPE.SECTION, './src/partials/presentation.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/advantages.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/portfolio.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/work_steps.html');
+await loadHTML(BLOCK_TYPE.SECTION, './src/partials/services.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/our_company.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/faq.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/formular.html');
