@@ -18,7 +18,7 @@ def create_inquiry(request):
     except json.JSONDecodeError:
         return JsonResponse({"error": "Invalid JSON"}, status=400)
 
-    required_fields = ["name", "company", "email", "phone"]
+    required_fields = ["name", "email", "phone"]
     missing_fields = [field for field in required_fields if not data.get(field)]
     if missing_fields:
         return JsonResponse(

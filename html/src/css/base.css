@@ -178,9 +178,14 @@ html {
 h2 {
   font-size: var(--fs-subtitle);
   font-weight: var(--fw-semiBold);
+  text-align: center;
 }
 
 h4 {
   font-size: 22px;
+}
+
+body.show {
+ overflow: hidden;
 }
 
