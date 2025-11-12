@@ -6,6 +6,6 @@ from .notifications import notify_all_channels
 
 
 @receiver(post_save, sender=ClientInquiry)
-def handle_inquiry_created(_sender, instance, created, **_kwargs):
+def handle_inquiry_created(sender, instance, created, **kwargs):
     if created:
         notify_all_channels(instance)

@@ -156,19 +156,7 @@
 .faq-text {
   font-size: var(--fs-normal);
   line-height: 26px;
-  text-color: var(--color-text-white);
-}
-
-.faq-blue-line {
-  height: 2px;
-  background: linear-gradient(
-    90.00000000000155deg,
-    rgba(0, 85, 255, 0) 0%,
-    var(--token-96e3aee0-df31-47ca-b20e-57841f0289ac) rgba(255, 0, 255, 0) 100%
-  );
-  will-change: transform;
-  opacity: 1;
-  transform: none;
+  color: var(--color-text-white);
 }
 
 .faq-title-h2 {
@@ -366,9 +354,6 @@
   font-size: var(--fs-normal);
   font-weight: var(--fw-semiBold);
   line-height: 1.4em;
-}
-
-.hidden {
 }
 
 .faq-visible {

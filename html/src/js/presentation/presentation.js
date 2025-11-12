@@ -117,7 +117,14 @@ function getDomRefs() {
   });
 }
 
+let animationId = null;
+let isAnimationInitialized = false;
+
 export async function initAnimation() {
+  if (isAnimationInitialized) {
+    cleanup();
+  }
+
   const { canvas, ctx, videoContainers, socialContainer, icons, section } =
     await getDomRefs();
 
@@ -322,11 +329,11 @@ export async function initAnimation() {
 
     const centerX = socialRect.left + socialRect.width / 2 - sectionRect.left;
     const centerY =
-      socialRect.top + socialRect.height / 2 - sectionRect.top + 35;
+      socialRect.top + socialRect.height / 2 - sectionRect.top + 20;
 
-    const baseRadius = radiusOuter + 35;
+    const baseRadius = radiusOuter + 0;
     const minRadius = 25;
-    const currentRadius = minRadius + (baseRadius - minRadius + 35) * scale;
+    const currentRadius = minRadius + (baseRadius - minRadius + 40) * scale;
 
     for (let i = 0; i < beams.length; i++) {
       const rad = (beams[i].targetAngle * Math.PI) / 180;
@@ -388,7 +395,7 @@ export async function initAnimation() {
     waveEl.style.height = '130px';
     waveEl.style.transform = 'translate(-50%, -50%) rotate(0deg)';
     waveEl.style.zIndex = '50';
-    document.body.appendChild(waveEl);
+    section.appendChild(waveEl);
 
     waveEl.style.opacity = '1';
     waveEl.style.transition = 'all 1.2s ease-out';
@@ -424,7 +431,8 @@ export async function initAnimation() {
 
   function animate(timestamp) {
     if (isPaused) {
-      return requestAnimationFrame(animate);
+      animationId = requestAnimationFrame(animate);
+      return;
     }
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -471,8 +479,8 @@ export async function initAnimation() {
         wave.style.transform = 'translate(-50%, -50%)';
         wave.style.opacity = '1';
         wave.style.transition = 'none';
-        wave.style.zIndex = '5';
-        document.body.appendChild(wave);
+        wave.style.zIndex = '100';
+        socialContainer.appendChild(wave);
       }
     } else if (animationPhase === 'compressing') {
       const elapsed = timestamp - phaseStartTime;
@@ -564,9 +572,34 @@ export async function initAnimation() {
       }
     }
 
-    requestAnimationFrame(animate);
+    animationId = requestAnimationFrame(animate);
+  }
+  function cleanup() {
+    cancelAnimationFrame(animationId);
+    animationId = null;
+
+    window.removeEventListener('resize', updateLayout);
+    window.removeEventListener('scroll', updateLayout);
+
+    socialContainer.replaceWith(socialContainer.cloneNode(true));
+
+    videos.forEach((video) => {
+      video.pause();
+      video.currentTime = 0;
+      video.removeEventListener('mouseenter', () => {});
+      video.removeEventListener('mouseleave', () => {});
+    });
+
+    if (wave) {
+      wave.remove();
+      wave = null;
+    }
+
+    beams = [];
   }
 
   positionIcons();
-  requestAnimationFrame(animate);
+  animationId = requestAnimationFrame(animate);
+
+  return cleanup;
 }

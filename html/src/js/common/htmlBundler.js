@@ -13,6 +13,9 @@ export async function loadHTML(block_type, file) {
     position = BUNDLING_POSITION.BEFORE_BEGIN;
   } else if (block_type === BLOCK_TYPE.FOOTER) {
     position = BUNDLING_POSITION.AFTER_END;
+  } else if (block_type === BLOCK_TYPE.MODAL) {
+    document.body.insertAdjacentHTML('beforeend', html);
+    return;
   } else {
     position = BUNDLING_POSITION.BEFORE_END;
   }
