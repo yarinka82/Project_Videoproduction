@@ -184,3 +184,8 @@ h4 {
   font-size: 22px;
 }
 
+:root{
+  --hover-animation-delay:0.3s;
+  --hover-animation-type:linear;
+  --focus-border-color:rgba(52, 152, 219, 0.4);
+}
