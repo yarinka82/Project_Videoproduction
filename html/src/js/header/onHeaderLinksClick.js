@@ -2,12 +2,13 @@ import { onClick } from "./onClick.js";
 
 export function onHeaderLinksClick() {
   const navLinksRef = document.querySelectorAll('.header-navigation-link');
-  const toFormularLink = document.querySelector('.header-formular-link');
+  const toFormularLinkRef = document.querySelector('.header-formular-link');
   const contactsRef = document.querySelectorAll('.header-contacts-link');
+  const logoLinkRef = document.querySelector('.header-logo-link');
 
-  if (!navLinksRef || !toFormularLink || !contactsRef) return;
+  if (!navLinksRef || !toFormularLinkRef || !contactsRef || !logoLinkRef) return;
 
-  [...navLinksRef, toFormularLink, ...contactsRef].forEach(link => {
+  [...navLinksRef, toFormularLinkRef, ...contactsRef, logoLinkRef].forEach(link => {
     link.addEventListener('click', onClick);
   });
 }

@@ -1,68 +1,39 @@
 <section id="formular-modal" class="modal modal-hidden">
-  <div class="modal-content">
-    <span class="close-button">&times;</span>
-    <h2 class="formular-title">Kostenloses Gespräch sichern</h2>
+  <div class="container">
+    <div class="modal-content">
+      <!-- <span class="close-button">&times;</span> -->
 
-    <form
-      id="inquiry-form"
-      action="https://formspree.io/f/xzzkpldb"
-      method="POST"
-      class="form-container"
-    >
-      <div class="input-group">
-        <label for="name">Dein Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          placeholder="Max Mustermann"
-        />
-      </div>
+      <h2 class="formular-title">Kostenloses Gespräch sichern</h2>
 
-      <div class="input-group">
-        <label for="company">Firma</label>
-        <input
-          type="text"
-          id="company"
-          name="company"
-          placeholder="Deine Firma"
-        />
-      </div>
+      <form id="inquiry-form" action="https://formspree.io/f/xzzkpldb" method="POST" class="form-container">
+        <div class="input-group">
+          <label for="name">Dein Name</label>
+          <input type="text" id="name" name="name" required placeholder="Max Mustermann" />
+        </div>
 
-      <div class="input-group">
-        <label for="email">E-Mail</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          placeholder="Deine E-Mail-Adresse"
-        />
-      </div>
+        <div class="input-group">
+          <label for="company">Firma</label>
+          <input type="text" id="company" name="company" placeholder="Deine Firma" />
+        </div>
 
-      <div class="input-group">
-        <label for="phone">Telefon</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          required
-          placeholder="+49 123 4567890"
-        />
-      </div>
+        <div class="input-group">
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="email" required placeholder="Deine E-Mail-Adresse" />
+        </div>
 
-      <div class="input-group">
-        <label for="message">Frage</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="3"
-          placeholder="Deine Frage..."
-        ></textarea>
-      </div>
+        <div class="input-group">
+          <label for="phone">Telefon</label>
+          <input type="tel" id="phone" name="phone" placeholder="+49 123 4567890" />
+        </div>
 
-      <button type="submit" class="cta-button">Absenden</button>
-    </form>
+        <div class="input-group">
+          <label for="message">Frage</label>
+          <textarea id="message" name="message" rows="3" placeholder="Deine Frage..."></textarea>
+        </div>
+
+        <button type="submit" class="cta-button">Absenden</button>
+      </form>
+    </div>
   </div>
+
 </section>

@@ -1,7 +1,8 @@
-.form-container {
+/* .form-container {
   width: 100%;
   padding: 40px 16px;
   border-radius: 16px;
+} */
 
   @media (min-width: 768px) {
     padding: 40px;
@@ -153,10 +154,7 @@ input:focus {
   width: 100%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
   transition: transform 0.3s ease;
 
   @media (min-width: 768px) {
@@ -179,6 +177,7 @@ input:focus {
   font-size: 1.5rem;
   color: #fff;
   cursor: pointer;
+}
   transform: rotate(0deg);
   transition: all 0.3s ease;
 

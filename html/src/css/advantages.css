@@ -3,13 +3,8 @@
   overflow-x: hidden;
 }
 
-.advantages-section-container {
-  padding-top: 42px;
-  padding-bottom: 128px;
-}
-
 .advantages-gallery {
-  margin-bottom: 128px;
+  margin-bottom: 80px;
 }
 
 .advantages-list,
@@ -246,6 +241,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .advantages-gallery {
+    margin-bottom: 110px;
+  }
+
   .advantage-card {
     flex-direction: row-reverse;
     justify-content: space-between;
