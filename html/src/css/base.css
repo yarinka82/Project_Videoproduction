@@ -153,6 +153,9 @@ body {
 :root {
   --euro-animation-duration: 3s;
   --euro-blinking-duration: 5s;
+  --hover-animation-delay:0.3s;
+  --hover-animation-type:linear;
+  --focus-border-color:rgba(52, 152, 219, 0.4);
 }
 
 /* Animation for Formular-button */
