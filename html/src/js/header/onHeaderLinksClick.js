@@ -9,6 +9,6 @@ export function onHeaderLinksClick() {
   if (!navLinksRef || !toFormularLinkRef || !contactsRefs || !logoLinkRef) return;
 
   [...navLinksRef, toFormularLinkRef, ...contactsRefs, logoLinkRef].forEach(link => {
-    link.addEventListener('click', onClick);
+    link.addEventListener('click', event=>onClick(event.currentTarget));
   });
 }
