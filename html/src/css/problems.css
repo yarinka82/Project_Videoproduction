@@ -417,7 +417,6 @@
 @media screen and (min-width: 1280px) {
   .problems-title {
     display: block;
-
     font-weight: var(--fw-bold);
     font-size: var(--fs-title);
     text-align: center;
@@ -453,7 +452,10 @@
   }
 
   .problems-card-title {
-    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 124px;
   }
 }
 
