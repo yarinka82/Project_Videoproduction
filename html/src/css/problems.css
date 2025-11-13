@@ -2,6 +2,11 @@
   background-image: var(--section-bg-color-grey);
 }
 
+.problems-section-container {
+  padding-top: 42px;
+  padding-bottom: 128px;
+}
+
 .problem-card {
   position: relative;
   overflow: hidden;
@@ -49,7 +54,7 @@
 .problems-gallery {
   display: flex;
   justify-content: center;
-  margin-bottom: 80px;
+  margin-bottom: 128px;
 }
 
 .problems-list {
@@ -405,7 +410,7 @@
 
 @media screen and (min-width: 768px) {
   .problems-gallery {
-    margin-bottom: 110px;
+    margin-bottom: 120px;
   }
 
   .problem-card {
