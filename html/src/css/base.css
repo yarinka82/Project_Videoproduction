@@ -178,6 +178,7 @@ html {
 h2 {
   font-size: var(--fs-subtitle);
   font-weight: var(--fw-semiBold);
+  text-align: center;
 }
 
 h4 {
@@ -189,3 +190,7 @@ h4 {
   --hover-animation-type:linear;
   --focus-border-color:rgba(52, 152, 219, 0.4);
 }
+body.show {
+ overflow: hidden;
+}
+

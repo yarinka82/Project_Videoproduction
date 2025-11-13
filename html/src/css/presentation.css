@@ -45,12 +45,6 @@
   overflow: visible;
 }
 
-.faq-dark-tag {
-}
-
-.faq-text {
-}
-
 .xmpr-title-h2 {
   text-shadow: 1px 1px var(--color-text-black),
     2px 2px 0 var(--color-text-black), 3px 3px 0 var(--color-text-black),
@@ -114,9 +108,6 @@
   height: min-content;
   padding: 0;
   overflow: visible;
-}
-
-.xmpr-video-wrap {
 }
 
 .xmpr-video {
@@ -190,19 +181,14 @@
 }
 
 .social-circle {
-  position: absolute;
+  position: relative;
   margin: 32px auto;
-  /* padding: 50px; */
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 250px;
   height: 250px;
   pointer-events: auto;
   cursor: pointer;
 
   @media (min-width: 768px) {
-    top: 35%;
     width: 300px;
     height: 300px;
   }
@@ -233,6 +219,7 @@
   align-items: center;
   justify-content: center;
   z-index: 200;
+
   @media (min-width: 768px) {
     width: 64px;
     height: 64px;
@@ -248,22 +235,25 @@
   border-radius: 50%;
   border: 6px solid rgba(var(--token-rgb-primary), 0.8);
   box-shadow: 0 0 70px rgba(var(--token-rgb-primary), 1),
-    0 0 140px rgba(var(--token-rgb-primary), 0.8),
-    inset 0 0 120px rgba(var(--token-rgb-primary), 0.8);
+    0 0 120px rgba(var(--token-rgb-primary), 0.8),
+    inset 0 0 100px rgba(var(--token-rgb-primary), 0.8);
   pointer-events: none;
   opacity: 0;
-  z-index: 8;
+  z-index: 200;
+  background-color: var(--bgcolor-secondary);
   animation: wavePulse 0.25s ease-in-out infinite alternate;
 }
 
 @keyframes wavePulse {
   0% {
     box-shadow: 0 0 70px rgba(var(--token-rgb-primary), 1),
-      0 0 100px rgba(var(--token-rgb-primary), 0.8);
+      0 0 120px rgba(var(--token-rgb-primary), 0.8),
+      inset 0 0 100px rgba(var(--token-rgb-primary), 0.8);
   }
   100% {
     box-shadow: 0 0 90px rgba(var(--token-rgb-primary), 1),
-      0 0 160px rgba(var(--token-rgb-primary), 0.9);
+      0 0 140px rgba(var(--token-rgb-primary), 0.8),
+      inset 0 0 120px rgba(var(--token-rgb-primary), 0.8);
   }
 }
 
@@ -308,17 +298,6 @@
   z-index: 5;
 }
 
-@keyframes wavePulse {
-  0% {
-    box-shadow: 0 0 80px rgba(var(--token-rgb-primary), 1),
-      0 0 150px rgba(var(--token-rgb-primary), 0.8);
-  }
-  100% {
-    box-shadow: 0 0 100px rgba(var(--token-rgb-primary), 1),
-      0 0 200px rgba(var(--token-rgb-primary), 0.9);
-  }
-}
-
 .svg-icons {
   z-index: 100;
 }
@@ -326,7 +305,6 @@
 .xora-bottom-text {
   display: flex;
   flex-direction: column;
-  padding-top: 300px;
   background: linear-gradient(
     30deg,
     var(--color-text-primary),
