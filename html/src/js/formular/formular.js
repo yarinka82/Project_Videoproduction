@@ -48,7 +48,6 @@ export function initFormularModal() {
       e.preventDefault();
       const formData = new FormData(form);
       const plainData = Object.fromEntries(formData.entries());
-      console.log('🚀 ~ initFormularModal ~ plainData:', plainData);
 
       try {
         const formspreeResponse = await fetch(form.action, {

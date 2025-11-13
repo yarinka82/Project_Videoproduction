@@ -1,0 +1,49 @@
+<svg width="400" height="150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="orangeGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff8c00"/>
+      <stop offset="100%" stop-color="#ff5500"/>
+    </radialGradient>
+    <filter id="embossedX">
+      <!-- Dark inner shadow (right and bottom) -->
+      <feFlood flood-color="#cc4400" result="darkColor"/>
+      <feComposite in="darkColor" in2="SourceAlpha" operator="in" result="darkBase"/>
+      <feGaussianBlur in="darkBase" stdDeviation="2" result="darkBlur"/>
+      <feOffset in="darkBlur" dx="3" dy="3" result="darkShadow"/>
+      <!-- Orange highlight (left and top) -->
+      <feFlood flood-color="#ffaa66" result="lightColor"/>
+      <feComposite in="lightColor" in2="SourceAlpha" operator="in" result="lightBase"/>
+      <feGaussianBlur in="lightBase" stdDeviation="1.5" result="lightBlur"/>
+      <feOffset in="lightBlur" dx="-2" dy="-2" result="lightHighlight"/>
+      <feMerge>
+        <feMergeNode in="darkShadow"/>
+        <feMergeNode in="lightHighlight"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="text3D" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="-4" dy="0" stdDeviation="0.3" flood-color="#222222f6"/>
+      <feDropShadow dx="1" dy="3" stdDeviation="1" flood-color="#000"/>
+      <feDropShadow dx="2" dy="5" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="text3D1" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="-1" dy="0" stdDeviation="0.3" flood-color="#000"/>
+      <feDropShadow dx="1" dy="2" stdDeviation="1" flood-color="#000"/>
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Orange Circle with shadow -->
+  <circle cx="74" cy="75" r="50" fill="#ff5500" opacity="0.9"/>
+  <circle cx="75" cy="75" r="50" fill="url(#orangeGradient)"/>
+  <!-- Carved effect - dark shadows inside -->
+  <text x="45" y="106" font-family="Montserrat, sans-serif" font-size="92" font-weight="bold" fill="#000" opacity="0.7">X</text>
+  <text x="44" y="106" font-family="Montserrat, sans-serif" font-size="92" font-weight="bold" fill="#000" opacity="0.5">X</text>
+  <!-- Light highlight on bottom-right -->
+  <text x="46" y="106" font-family="Montserrat, sans-serif" font-size="92" font-weight="bold" fill="#ff5500" opacity="0.4">X</text>
+  <!-- Main carved X (dark gray) -->
+  <text x="45" y="106" font-family="Montserrat, sans-serif" font-size="92" font-weight="bold" fill="#2a2a2a"  filter="url(#embossedX)" >X</text>
+  <!-- ORA -->
+  <text x="127" y="95" font-family="Arial, sans-serif" font-size="50" font-weight="bold" fill="#333" filter="url(#text3D)" letter-spacing="-1px">ORA</text>
+  <!-- MEDIA -->
+  <text x="120" y="120" font-family="Montserrat, sans-serif" font-size="24" font-weight="bold" fill="#333" filter="url(#text3D1)" letter-spacing="1px">MEDIA</text>
+</svg>
