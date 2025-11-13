@@ -2,7 +2,7 @@
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 256 256"
         focusable="false"
-        color="var(--token-8967b5b6-ba7c-4206-8bde-e6f934ca98d8, rgb(0, 153, 255))"
+        color="var(--token-8967b5b6-ba7c-4206-8bde-e6f934ca98d8, rgb(241, 97, 30))"
         style="
           user-select: none;
           width: 100%;
@@ -10,21 +10,21 @@
           display: inline-block;
           fill: var(
             --token-8967b5b6-ba7c-4206-8bde-e6f934ca98d8,
-            rgb(0, 153, 255)
+            rgb(241, 97, 30)
           );
           color: var(
             --token-8967b5b6-ba7c-4206-8bde-e6f934ca98d8,
-            rgb(0, 153, 255)
+            rgb(241, 97, 30)
           );
           flex-shrink: 0;
         "
       >
-        <g
-          color="var(--token-8967b5b6-ba7c-4206-8bde-e6f934ca98d8, rgb(0, 153, 255))"
+  <g
+          color="var(--token-8967b5b6-ba7c-4206-8bde-e6f934ca98d8, rgb(241, 97, 30))"
           weight="regular"
         >
-          <path
+    <path
             d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
           ></path>
-        </g>
-      </svg>
+  </g>
+</svg>

@@ -13,13 +13,17 @@ export function initPortfolio() {
   startObserver(
     '.portfolio-subtitle',
     async () => {
-      const { list: videos, pagination } = await fetchVideo({
+      const {
+        list: videos,
+        pagination,
+        lengthBackend,
+      } = await fetchVideo({
         page: currentPage,
         perPage,
         category: getCategoryId(),
       });
 
-      renderVideos(videos);
+      renderVideos(videos, lengthBackend);
       await fetchCategory();
       updatePagination({
         page: pagination.current_page,

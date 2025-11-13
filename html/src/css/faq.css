@@ -71,16 +71,10 @@
   align-items: flex-start;
   gap: 50px;
   width: 100%;
-  max-width: 450px;
   height: min-content;
   padding: 0;
   position: relative;
   overflow: visible;
-
-  @media (min-width: 798px) {
-    width: 100%;
-    max-width: 460px;
-  }
 
   @media (min-width: 1200px) {
     min-width: 450px;
@@ -108,7 +102,6 @@
   align-items: flex-start;
   gap: 30px;
   width: 100%;
-  /* height: min-content; */
   padding: 0;
   display: flex;
   position: relative;
@@ -168,6 +161,7 @@
   text-shadow: 1px 1px var(--color-text-black),
     1px 1px 0 var(--token-448be32f-5ce2-4083-9bd4-714d017438ce),
     2px 2px 0 var(--color-text-black);
+  text-align: left;
 
   @media (min-width: 1200px) {
     min-width: 450px;

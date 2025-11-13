@@ -1,13 +1,18 @@
-export function renderVideos(videos) {
+export function renderVideos(videos, lengthBackend) {
   const videoList = document.getElementById('videos');
   videoList.innerHTML = '';
 
-  if (videos.length === 0) {
+  if (videos.length === 0 || lengthBackend === 0) {
+    const container = document.querySelector('.gallery-dropdown-container');
     const emptyMessage = document.createElement('li');
     emptyMessage.className = 'video-empty';
-    emptyMessage.textContent = 'Diese Kategorie wird aktuell befüllt.';
-    videoList.appendChild(emptyMessage);
-    return;
+    emptyMessage.textContent =
+      'Diese Kategorie wird aktuell befüllt. Schauen Sie sich unsere anderen Videos an.';
+    container.appendChild(emptyMessage);
+
+    setTimeout(() => {
+      emptyMessage.remove();
+    }, 2000);
   }
 
   videos.map((video) => {

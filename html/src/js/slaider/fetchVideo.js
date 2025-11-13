@@ -7,6 +7,6 @@ export async function fetchVideo({ page = 1, perPage = 3, category = null }) {
     url += `&category=${category}`;
   }
 
-  const { list, pagination } = await getApi(url, exampleVideos);
-  return { list, pagination };
+  const { list, pagination, lengthBackend } = await getApi(url, exampleVideos);
+  return { list, pagination, lengthBackend };
 }
