@@ -12,6 +12,7 @@ import { makeProblemsSectionMarkup } from './src/js/problems/makeProblemsSection
 import { loadSvgSafely } from './src/js/presentation/presentation.js';
 import { initFormularModal } from './src/js/formular/formular.js';
 import { flipWorkStepCard } from './src/js/work-steps/flipWorkStepCard.js'
+import { makeServicesSectionMarkup } from './src/js/services/makeServicesSection.js';
 
 // Partials bundlingh
 await loadHTML(BLOCK_TYPE.HEADER, './src/partials/header.html');
@@ -39,6 +40,7 @@ makeAdvantagesSectionMarkup(
   'advantages-glr',
   './src/template/advantage-cards.hbs'
 );
+makeServicesSectionMarkup('services-glr','./src/template/services-cards.hbs');
 
 // Portfolio
 //fetchVideos();
