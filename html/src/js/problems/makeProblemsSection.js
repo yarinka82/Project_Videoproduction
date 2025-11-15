@@ -1,6 +1,6 @@
 import { cards } from '../../../db/problems.js';
 import loadTemplate from '../common/loadTemplate.js';
-import addMarkup from './addMarkup.js';
+import addMarkup from '../common/addMarkupFromTemplate.js';
 import { startObserver } from '../common/observer.js';
 import { addImgContentToCard } from './addImgContentToCards.js';
 
