@@ -5,40 +5,29 @@ export function initFormularModal() {
   const closeBtn = modal?.querySelector('.close-button');
   const form = document.getElementById('inquiry-form');
   const body = document.body;
+  const BASE_URL = "https://your-backend-url.com"; // change to your backend URL
 
   if (!modal || !closeBtn) return;
 
+
   // const openModal = () => {
-  //   modal.classList.remove("modal-hidden");
-  //   requestAnimationFrame(() => modal.classList.add("show"));
-  //   history.pushState({}, "", "/formular");
+  //   modal.classList.remove('modal-hidden');
+  //   requestAnimationFrame(() => {
+  //     modal.classList.add('show');
+  //     body.classList.add('show');
+  //   });
+  //   history.pushState({}, '', '#formular');
   // };
-  const openModal = () => {
-    modal.classList.remove('modal-hidden');
-    requestAnimationFrame(() => {
-      modal.classList.add('show');
-      body.classList.add('show');
-    });
-    history.pushState({}, '', '#formular');
-  };
+
 
   // const closeModal = () => {
-  //   modal.classList.remove("show");
-  //   setTimeout(() => modal.classList.add("modal-hidden"), 300);
-  //   history.pushState({}, "", "/html");
+  //   modal.classList.remove('show');
+  //   body.classList.remove('show');
+  //   setTimeout(() => modal.classList.add('modal-hidden'), 300);
+  //   history.pushState({}, '', window.location.pathname);
   // };
 
-  // if (window.location.pathname === "/formular" || window.location.pathname === "/formular/") {
-  //   openModal();
-  // }
-  const closeModal = () => {
-    modal.classList.remove('show');
-    body.classList.remove('show');
-    setTimeout(() => modal.classList.add('modal-hidden'), 300);
-    history.pushState({}, '', window.location.pathname);
-  };
-
-  if (window.location.hash === '#formular') openModal();
+  // if (window.location.hash === '#formular') openModal();
 
   // document.querySelectorAll('.formular-link').forEach((link) => {
   //   link.addEventListener('click', (e) => {
@@ -62,8 +51,7 @@ export function initFormularModal() {
   // });
 
   
-  const BASE_URL = "https://your-backend-url.com"; // change to your backend URL
-  const form = document.getElementById("inquiry-form");
+
   window.addEventListener('popstate', () => {
     window.location.hash === '#formular' ? openModal() : closeModal();
   });
