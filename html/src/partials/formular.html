@@ -1,16 +1,17 @@
-<section id="formular-modal" class="modal modal-hidden">
-  <div class="modal-content">
-    <span class="close-button">&times;</span>
+<section id="formular-modal" class="formular-class-modal">
+  <div class="formular-modal-content">
+
     <h2 class="formular-title">Kostenloses Gespräch sichern</h2>
 
     <form
       id="inquiry-form"
       action="https://formspree.io/f/xzzkpldb"
       method="POST"
-      class="form-container"
+      class="formular-container"
     >
-      <div class="input-group">
-        <label for="name">Dein Name</label>
+
+      <div class="formular-input-group">
+        <label class="formular-label" for="name">Dein Name</label>
         <input
           type="text"
           id="name"
@@ -20,8 +21,8 @@
         />
       </div>
 
-      <div class="input-group">
-        <label for="company">Firma</label>
+      <div class="formular-input-group">
+        <label class="formular-label" for="company">Firma</label>
         <input
           type="text"
           id="company"
@@ -30,8 +31,8 @@
         />
       </div>
 
-      <div class="input-group">
-        <label for="email">E-Mail</label>
+      <div class="formular-input-group">
+        <label class="formular-label" for="email">E-Mail</label>
         <input
           type="email"
           id="email"
@@ -41,19 +42,18 @@
         />
       </div>
 
-      <div class="input-group">
-        <label for="phone">Telefon</label>
+      <div class="formular-input-group">
+        <label class="formular-label" for="phone">Telefon</label>
         <input
           type="tel"
           id="phone"
           name="phone"
-          required
           placeholder="+49 123 4567890"
         />
       </div>
 
-      <div class="input-group">
-        <label for="message">Frage</label>
+      <div class="formular-input-group">
+        <label class="formular-label" for="message">Frage</label>
         <textarea
           id="message"
           name="message"
@@ -62,7 +62,12 @@
         ></textarea>
       </div>
 
-      <button type="submit" class="cta-button">Absenden</button>
+      <button type="submit" class="formular-cta-button formular-link">
+        <span class="formular-link-title">
+          Jetzt Erstgespräch vereinbaren
+        </span>
+      </button>
+
     </form>
   </div>
 </section>

@@ -5,39 +5,52 @@ export function initFormularModal() {
   const closeBtn = modal?.querySelector('.close-button');
   const form = document.getElementById('inquiry-form');
   const body = document.body;
+  const BASE_URL = "https://your-backend-url.com"; // change to your backend URL
 
   if (!modal || !closeBtn) return;
 
-  const openModal = () => {
-    modal.classList.remove('modal-hidden');
-    requestAnimationFrame(() => {
-      modal.classList.add('show');
-      body.classList.add('show');
-    });
-    history.pushState({}, '', '#formular');
-  };
 
-  const closeModal = () => {
-    modal.classList.remove('show');
-    body.classList.remove('show');
-    setTimeout(() => modal.classList.add('modal-hidden'), 300);
-    history.pushState({}, '', window.location.pathname);
-  };
+  // const openModal = () => {
+  //   modal.classList.remove('modal-hidden');
+  //   requestAnimationFrame(() => {
+  //     modal.classList.add('show');
+  //     body.classList.add('show');
+  //   });
+  //   history.pushState({}, '', '#formular');
+  // };
 
-  if (window.location.hash === '#formular') openModal();
 
-  document.querySelectorAll('.formular-link').forEach((link) => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal();
-    });
-  });
+  // const closeModal = () => {
+  //   modal.classList.remove('show');
+  //   body.classList.remove('show');
+  //   setTimeout(() => modal.classList.add('modal-hidden'), 300);
+  //   history.pushState({}, '', window.location.pathname);
+  // };
 
-  closeBtn.addEventListener('click', closeModal);
+  // if (window.location.hash === '#formular') openModal();
 
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
+  // document.querySelectorAll('.formular-link').forEach((link) => {
+  //   link.addEventListener('click', (e) => {
+  //     e.preventDefault();
+  //     openModal();
+  //   });
+  // });
+
+  // closeBtn.addEventListener('click', closeModal);
+
+  // window.addEventListener('click', (e) => {
+  //   if (e.target === modal) closeModal();
+  // });
+
+  // window.addEventListener("popstate", () => {
+  //   if (window.location.pathname === "/formular" || window.location.pathname === "/formular/") {
+  //     openModal();
+  //   } else {
+  //     closeModal();
+  //   }
+  // });
+
+  
 
   window.addEventListener('popstate', () => {
     window.location.hash === '#formular' ? openModal() : closeModal();
