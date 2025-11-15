@@ -2,11 +2,6 @@
   background-image: var(--section-bg-color-grey);
 }
 
-.problems-section-container {
-  padding-top: 42px;
-  padding-bottom: 128px;
-}
-
 .problem-card {
   position: relative;
   overflow: hidden;
@@ -47,14 +42,14 @@
   font-style: normal;
   font-weight: var(--fw-medium);
   line-height: 1.4;
-  color: var(--token-fe970af2-997a-4c76-8490-61d4a6bcf24f);
+  color: var(--token-6aa2c91d-3eef-4470-885f-78bce3b1b77d);
   text-align: center;
 }
 
 .problems-gallery {
   display: flex;
   justify-content: center;
-  margin-bottom: 128px;
+  margin-bottom: 80px;
 }
 
 .problems-list {
@@ -410,7 +405,7 @@
 
 @media screen and (min-width: 768px) {
   .problems-gallery {
-    margin-bottom: 120px;
+    margin-bottom: 110px;
   }
 
   .problem-card {
@@ -422,7 +417,6 @@
 @media screen and (min-width: 1280px) {
   .problems-title {
     display: block;
-
     font-weight: var(--fw-bold);
     font-size: var(--fs-title);
     text-align: center;
@@ -458,7 +452,10 @@
   }
 
   .problems-card-title {
-    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 124px;
   }
 }
 

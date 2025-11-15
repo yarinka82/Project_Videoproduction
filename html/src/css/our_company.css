@@ -1,7 +1,7 @@
 .our_company {
   background-color: var(--bgcolor-secondary);
   color: var(--color-text-white);
-  padding: 80px 0;
+  /* padding: 80px 0; */
 
   overflow: hidden;
 }
@@ -16,7 +16,7 @@
   font-weight: var(--fw-bold);
   margin-bottom: 60px;
   color: var(--color-text-white);
-  text-shadow: 0 0 18px var(--token-eb7b6d97-3952-433e-81bb-c192cbbf1822);
+  text-shadow: 0 0 18px var(--token-448be32f-5ce2-4083-9bd4-714d017438ce);
   text-align: center;
 }
 
@@ -25,19 +25,20 @@
   grid-template-columns: 1fr;
   gap: 40px;
   justify-items: center;
+  margin-bottom: 80px;
 }
 
 .our_company-card {
   background: var(--card-bg-color);
   border-radius: 12px;
   padding: 20px;
-  width: 260px;
+  width: 280px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .our_company-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgb(238, 93, 219);
+  box-shadow: 0 0 40px rgb(230, 73, 11);
 }
 
 .our_company-image {
@@ -45,7 +46,7 @@
   height: 260px;
   border-radius: 10px;
   object-fit: cover;
-  border: 2px solid rgba(116, 0, 211, 0.61);
+  border: 2px solid rgba(238, 70, 106, 0.76);
   margin-bottom: 20px;
 }
 
@@ -53,25 +54,42 @@
   font-size: 20px;
   font-weight: var(--fw-semiBold);
   color: var(--color-text-white);
+  text-shadow: 0 0 18px var(--token-448be32f-5ce2-4083-9bd4-714d017438ce);
+  text-align: center;
   margin-bottom: 5px;
 }
 
 .our_company-text {
   color: var(--color-text-primary);
-  font-size: 16px;
+  font-size: var(--fs-normal);
+  text-align: center;
 }
 
-.formular-link {
+/* .formular-link {
   margin-top: 60px;
   width: 100%;
   max-width: 320px;
-}
+} */
 
 /* Responsive */
 @media (min-width: 768px) {
   .our_company-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
+    margin-bottom: 110px;
+  }
+  .our_company-card {
+    /* width: 320px; */
+    max-width: 320px;
+  }
+
+  .our_company-subtitle {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .our_company-text {
+    font-size: 18px;
   }
 }
 
@@ -81,7 +99,7 @@
   }
 
   .our_company-card {
-    /* width: 300px; */
-    max-width: 320px;
+    /* width: 360px; */
+    max-width: 360px;
   }
 }

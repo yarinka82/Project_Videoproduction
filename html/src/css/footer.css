@@ -1,6 +1,6 @@
 #footer {
     padding: 20px 0;
-    background-color: var(--bgcolor-primary);
+    background-color: var(--bgcolor-secondary);
 }
 
 .footer-container {
@@ -28,7 +28,6 @@
     text-align: center;
 }
 
-
 .footer-logo-div {
     display: flex;
     justify-content: center;
@@ -50,7 +49,7 @@
 }
 
 .footer-link {
-    color: #066164;
+    color: var(--color-text-secondary);
     text-decoration: none;
     vertical-align: middle;
 }
@@ -69,8 +68,12 @@
 }
 
 .footer-media-icons {
-    color: #374151;
+    color: var(--color-text-primary);
     font-weight: var(--fw-medium);
+}
+
+.desktop-line-divider {
+    display: none;
 }
 
 @media screen and (min-width: 810px) {
@@ -99,16 +102,20 @@
     .footer-logo-img {
         height: 80px;
     }
+
+    .desktop-line-divider {
+        display: flex;
+    }
 }
 
 .icons-sprite {
-    width: 37px;
-    height: 37px;
+    width: 36px;
+    height: 35px;
     background-image: url('../img/social-media-orange-square.png');
     background-repeat: no-repeat;
     display: inline-block;
     border-radius: 4px;
-    background-size: calc(850px/5) calc(800px/5);
+    background-size: calc(850px / 5) calc(800px / 5);
 }
 
 .icon-fb {
@@ -121,4 +128,18 @@
 
 .icon-youtube {
     background-position: -125px -8px;
+}
+
+.icon-tik-tok {
+    width: 36px;
+    height: 35px;
+    background-image: url('../img/tiktok-logo-orange.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    border-radius: 4px;
+    background-size: 35px;
+}
+
+.it-hub-font {
+    font-variant: small-caps;
 }

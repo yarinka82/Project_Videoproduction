@@ -10,7 +10,7 @@
   padding: 64px 0;
   position: relative;
   overflow: visible;
-  background-color: #fff;
+  background-color: var(---bgcolor-primary);
 
   @media (min-width: 780px) {
     gap: 70px;
@@ -32,7 +32,7 @@
 .faq-line {
   will-change: transform;
   z-index: 1;
-  background-color: #fff;
+  background-color: var(--bgcolor-primary);
   border-radius: 1px;
   flex: none;
   height: 10px;
@@ -71,16 +71,10 @@
   align-items: flex-start;
   gap: 50px;
   width: 100%;
-  max-width: 450px;
   height: min-content;
   padding: 0;
   position: relative;
   overflow: visible;
-
-  @media (min-width: 798px) {
-    width: 100%;
-    max-width: 460px;
-  }
 
   @media (min-width: 1200px) {
     min-width: 450px;
@@ -108,7 +102,6 @@
   align-items: flex-start;
   gap: 30px;
   width: 100%;
-  /* height: min-content; */
   padding: 0;
   display: flex;
   position: relative;
@@ -129,14 +122,18 @@
     rgba(0, 0, 0, 0.5)
   );
   background: radial-gradient(50% 50%, rgb(9, 13, 18) 0%, rgb(9, 13, 18) 100%);
-  box-shadow: rgba(0, 85, 255, 0.1) 0px 10px 10px -1px inset;
+  box-shadow: rgb(0, 85, 255, 0.1) 0px 10px 10px -1px inset;
   opacity: 1;
   border-radius: 10px;
   transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    background: radial-gradient(50% 50%, #001aff 0%, rgb(9, 13, 18) 100%);
-    box-shadow: 0 0 3px rgba(0, 144, 218, 0.6);
+    background: radial-gradient(
+      60% 20% at 50% 100%,
+      var(--token-448be32f-5ce2-4083-9bd4-714d017438ce) 0%,
+      var(--token-8967b5b7-ba7d-4206-8bde-e6f934ca98d8) 100%
+    );
+    box-shadow: 0 0 3px rgba(rgb(var(--token-rgb-primary)) 0.6);
   }
 }
 
@@ -152,20 +149,7 @@
 .faq-text {
   font-size: var(--fs-normal);
   line-height: 26px;
-  text-color: var(--color-text-white);
-}
-
-.faq-blue-line {
-  height: 2px;
-  background: linear-gradient(
-    90.00000000000155deg,
-    rgba(0, 85, 255, 0) 0%,
-    var(--token-35c72760-ab33-4607-b96d-ed9b98f8a0d9, rgb(0, 144, 218))
-      rgba(0, 85, 255, 0) 100%
-  );
-  will-change: transform;
-  opacity: 1;
-  transform: none;
+  color: var(--color-text-white);
 }
 
 .faq-title-h2 {
@@ -174,6 +158,10 @@
   transform: translate3d(-50%, 0, 120px) scale(0.5);
   transition: all 1.2s ease-out;
   transition-delay: 1s;
+  text-shadow: 1px 1px var(--color-text-black),
+    1px 1px 0 var(--token-448be32f-5ce2-4083-9bd4-714d017438ce),
+    2px 2px 0 var(--color-text-black);
+  text-align: left;
 
   @media (min-width: 1200px) {
     min-width: 450px;
@@ -190,11 +178,15 @@
   transform: none;
   will-change: transform;
   color: var(--color-text-black);
+  text-shadow: 1px 1px var(--token-448be32f-5ce2-4083-9bd4-714d017438ce),
+    1px 1px 0 var(--token-448be32f-5ce2-4083-9bd4-714d017438ce),
+    2px 1px 0 var(--color-text-black);
 }
 
 .faq-text-base {
   line-height: 1.4em;
   text-align: start;
+  text-shadow: 0.5px 0 var(--color-text-black);
 
   @media (min-width: 1200px) {
     font-size: var(--fs-big);
@@ -231,7 +223,7 @@
   height: min-content;
   border-radius: 20px;
   background-color: var(
-    --token-74f48371-76c0-476a-a319-1331b3a438c2,
+    --token-8967b5b7-de7d-4207-8bde-e6f934ca98d8,
     rgb(8, 8, 8)
   );
   transform-origin: 50% 50% 0px;
@@ -255,11 +247,11 @@
   transform: translate(0);
 
   &:hover {
-    box-shadow: 0 0 0 2px rgb(0, 153, 255);
+    box-shadow: 0 0 0 2px var(--token-eb7b6d97-3952-433e-81bb-c192cbbf1822);
     background: radial-gradient(
       60% 20% at 50% 100%,
-      var(--token-8967b5b6-ba7c-4206-8bde-e6f934ca98d8, rgb(0, 153, 255)) 0%,
-      var(--token-4d67072c-df86-41a3-8260-1a48b41c6ca7, rgb(17, 17, 17)) 100%
+      var(--token-448be32f-5ce2-4083-9bd4-714d017438ce) 0%,
+      var(--token-8967b5b7-ba7d-4206-8bde-e6f934ca98d8) 100%
     );
   }
 }
@@ -267,13 +259,13 @@
 .faq-accordion.open {
   gap: 17px;
   /* border-radius: 8px; */
-  box-shadow: 0 0 0 4px rgb(0, 153, 255);
+  box-shadow: 0 0 0 4px var(--token-eb7b6d97-3952-433e-81bb-c192cbbf1822);
 
   &:hover {
     background: radial-gradient(
       60% 20% at 50% 100%,
-      var(--token-8967b5b6-ba7c-4206-8bde-e6f934ca98d8, rgb(0, 153, 255)) 0%,
-      var(--token-4d67072c-df86-41a3-8260-1a48b41c6ca7, rgb(17, 17, 17)) 100%
+      var(--token-448be32f-5ce2-4083-9bd4-714d017438ce) 0%,
+      var(--token-8967b5b7-ba7d-4206-8bde-e6f934ca98d8) 100%
     );
   }
 }
@@ -306,9 +298,9 @@
   width: 100%;
   background: linear-gradient(
     90deg,
-    rgba(0, 85, 255, 0.2) 0%,
-    var(--token-8967b5b6-ba7c-4206-8bde-e6f934ca98d8, rgb(0, 153, 255)) 50%,
-    rgba(0, 85, 255, 0.2) 100%
+    rgba(var(--token-rgb-secondary), 0.2) 0%,
+    var(--token-eb7b6d97-3952-433e-81bb-c192cbbf1822) 50%,
+    rgba(var(--token-rgb-secondary), 0.2) 100%
   );
 }
 
@@ -338,7 +330,7 @@
 
 .faq-accordion.open .faq-icon {
   transform: rotate(22.5deg);
-  color: rgb(0, 153, 255);
+  color: var(--token-eb7b6d97-3952-433e-81bb-c192cbbf1822);
 }
 
 .faq-accordion-title {
@@ -358,34 +350,32 @@
   line-height: 1.4em;
 }
 
-.hidden {
-}
-
 .faq-visible {
   opacity: 1;
   transform: translate3d(0, 0, 0) scale(1);
 }
 
 .spark {
-  --spark-width: 50px;
-  --spark-height: 3px;
+  --spark-width: 20px;
+  --spark-height: 2px;
   --border-width: 2px;
 
   position: absolute;
   width: var(--spark-width);
   height: var(--spark-height);
+  border-radius: 50%;
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(0, 100, 200, 0.1) 10%,
-    rgba(0, 150, 255, 0.3) 20%,
-    rgba(0, 200, 255, 0.6) 35%,
-    #00d9ff 45%,
-    #ffffff 50%,
-    #00d9ff 55%,
-    rgba(0, 200, 255, 0.6) 65%,
-    rgba(0, 150, 255, 0.3) 80%,
-    rgba(0, 100, 200, 0.1) 90%,
+    var(--token-9c682c5f-cdc7-48a3-8e8c-85c4246e47a4) 10%,
+    var(--token-shark-yel) 20%,
+    var(--token-96e3aee0-df31-47ca-b20e-57841f0289ac) 35%,
+    var(--token-448be32f-5ce2-4083-9bd4-714d017438ce) 45%,
+    var(--token-eb7b6d97-3952-433e-81bb-c192cbbf1822) 50%,
+    var(--token-448be32f-5ce2-4083-9bd4-714d017438ce) 55%,
+    var(--token-96e3aee0-df31-47ca-b20e-57841f0289ac) 65%,
+    var(--token-shark-yel) 80%,
+    var(--token-9c682c5f-cdc7-48a3-8e8c-85c4246e47a4) 90%,
     transparent 100%
   );
   border-radius: 2px;
@@ -393,7 +383,7 @@
 }
 
 .spark.active {
-  animation: moveSpark 1s linear infinite, pulsate 0.8s ease-in-out infinite;
+  animation: moveSpark 1.5s linear infinite, pulsate 1s ease-in-out infinite;
   z-index: 10;
 }
 

@@ -1,5 +1,5 @@
 export const baseUrl = 'https://videoproduction.onrender.com';
-const BASE_URL = `${baseUrl}/api`;
+export const BASE_URL = `${baseUrl}/api`;
 
 export async function getApi(endpoint, baseList, options = {}) {
   const url = `${BASE_URL}${endpoint}`;
@@ -23,7 +23,8 @@ export async function getApi(endpoint, baseList, options = {}) {
   try {
     const response = await fetch(url, defaultOptions);
     const res = await response.json();
-    if (res.status === 200) {
+    const lengthBackend = res.list.length;
+    if (res.status === 200 && length > 0) {
       if (res.pagination)
         pagination = {
           current_page: res.pagination.page,
@@ -34,6 +35,8 @@ export async function getApi(endpoint, baseList, options = {}) {
           has_previous: res.pagination.has_previous,
         };
       return { list: res.list, pagination };
+    } else if (lengthBackend === 0) {
+      return { list: baseList, pagination, lengthBackend };
     } else {
       return { list: baseList, pagination };
     }

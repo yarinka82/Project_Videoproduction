@@ -3,11 +3,13 @@ import { onHeaderLinksClick } from "./onHeaderLinksClick.js";
 import { fixHeaderPosition } from "./fixHeaderPosition.js";
 
 export async function onHeaderLoad() {
-  fixHeaderPosition();
+  const headerRef = document.getElementById('header');
+
+  fixHeaderPosition(headerRef);
   onHeaderMenuBtnClick();
   onHeaderLinksClick();
 
-  window.addEventListener('resize', fixHeaderPosition);
+  window.addEventListener('resize', ()=>fixHeaderPosition(headerRef));
   window.addEventListener('resize', onHeaderMenuBtnClick);
 }
 

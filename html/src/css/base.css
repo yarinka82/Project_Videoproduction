@@ -18,16 +18,18 @@ body {
   --fs-primary: 14px; /* <p> */
   --fs-normal: 16px; /* <p normal> */
   --fs-big: 18px; /* <p big> */
-  --fs-secondary: 24px; /* <h3> */
-  --fs-title: 36px; /* <h2> */
+  --fs-title: 36px; /* <h1> */
+  --fs-subtitle: 32px; /* <h2> */
+  --fs-secondary: 28px; /* <h3> */
 
   @media only screen and (min-width: 768px) {
     --fs-title: 56px;
+    --fs-subtitle: 56px;
   }
 
   /*Fonts weights*/
   --fw-medium: 500; /* <p> */
-  --fw-semiBold: 600;
+  --fw-semiBold: 600; /* <h2>, <h3> */
   --fw-bold: 700;
   --fw-extraBold: 900;
 
@@ -35,36 +37,36 @@ body {
 
   --link-bg-color: linear-gradient(
     201deg,
-    rgb(230, 70, 222) 0%,
-    rgb(74, 14, 102) 100% /* rgb(102, 203, 255) 0%,
+    rgb(230, 193, 70) 0%,
+    rgb(172, 15, 81) 100% /* rgb(102, 203, 255) 0%,
     rgb(0, 76, 148) 100% */
   );
   --hoveredlink-bg-color: linear-gradient(
     270deg,
-    rgb(205, 125, 230) -32%,
-    rgb(44, 0, 203) 100% /* rgb(102, 203, 255) -32%, */
+    rgb(230, 184, 125) -32%,
+    rgb(203, 0, 118) 100% /* rgb(102, 203, 255) -32%, */
       /* rgb(0, 134, 203) 100% */
   );
   --line-color: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0) 0%,
-    rgba(247, 0, 255, 0.945) 50%,
+    rgba(255, 217, 0, 0.945) 50%,
     /* rgb(0, 153, 255) 50%, */ rgba(255, 255, 255, 0) 100%
   );
   --image-blur: linear-gradient(
     0deg,
-    rgba(204, 0, 255, 0.164) 0%,
+    rgba(255, 0, 98, 0.164) 0%,
     /* rgba(0, 153, 255, 0.61) 0%, */ rgba(255, 255, 255, 0) 50%,
     rgba(253, 254, 255, 0.008) 100%
   );
   --card-bg-color: radial-gradient(
     50% 31% at 50% 0%,
-    rgb(187, 8, 231) 0%,
+    rgb(231, 179, 8) 0%,
     /* rgb(0, 153, 255) 0%, */ rgb(17, 17, 17) 100%
   );
   --image-border-color: radial-gradient(
     124% 75% at 100% 50%,
-    rgba(183, 0, 255, 0.3) 0%,
+    rgba(255, 0, 55, 0.3) 0%,
     /* rgba(0, 153, 255, 0.3) 0%, */ rgba(255, 255, 255, 0.15) 100%
   );
 
@@ -84,8 +86,9 @@ body {
 
   --problems-card1-thumb-bg-color: radial-gradient(
     50% 31% at 50% 100%,
-    rgba(98, 0, 255, 0.6) 0%,
-    /* rgba(0, 153, 255, 0.6) 0%, */ rgba(18, 18, 18, 0) 100%
+    rgba(255, 0, 76, 0.6) 0%,
+    /* rgba(0, 153, 255, 0.6) 0%, */ rgb(43, 42, 42) 100%
+      /* rgba(17, 17, 17, 0) 100% */
   );
 
   --section-bg-color-grey:  background-image: linear-gradient(
@@ -98,13 +101,15 @@ body {
 /* === Base Colors === */
 :root {
   /* Background colors */
-  --bgcolor-primary: #fbfbfb;
-  --bgcolor-secondary: #000;
+  --bgcolor-primary: #c5bebe;
+  /* --bgcolor-primary: #fbfbfb; */
+  --bgcolor-secondary: #3b3939;
+  /* --bgcolor-secondary: #000; */
   --header-bg-color: rgba(17, 24, 38, 0.73);
 
   /* Fonts colors */
 
-  --color-text-primary: #da96cb; /* <p> */
+  --color-text-primary: #f57309; /* <p> */
   /* --color-text-primary: #9ca3af; <p> */
   --color-text-secondary: #f4f4f6; /* <h3> */
   --color-text-black: #000; /* <h2> */
@@ -128,14 +133,19 @@ body {
   --token-5a64587c-3031-4427-b612-7af2d247be89: #f3f4f6;
   --token-9c682c5f-cdc7-48a3-8e8c-85c4246e47a4: #fff;
   --token-448be32f-5ce2-4083-9bd4-714d017438ce: #ff9700;
-  --token-96e3aee0-df31-47ca-b20e-57841f0289ac: #f3b102;
+  --token-96e3aee0-df31-47ca-b20e-57841f0289ac: #f1732a;
+  /* --token-448be32f-5ce2-4083-9bd4-714d017438ce: #f39b18;
+  --token-96e3aee0-df31-47ca-b20e-57841f0289ac: #f3b102; */
   --token-35c72760-ab33-4607-b96d-ed9b98f8a0d9: #0090da;
-  --token-eb7b6d97-3952-433e-81bb-c192cbbf1822: #ee5ddb;
+  --token-eb7b6d97-3952-433e-81bb-c192cbbf1822: #f1611e;
   /* --token-eb7b6d97-3952-433e-81bb-c192cbbf1822: #66cbff; */
   --token-c6e98fbd-6551-4a23-b582-f27b355c7007: #004c94;
   --token-8967b5b6-ba7c-4206-8bde-e6f934ca98d8: #09f;
   --token-8967b5b7-ba7d-4206-8bde-e6f934ca98d8: #262626;
   --token-8967b5b7-de7d-4207-8bde-e6f934ca98d8: #050505;
+  --token-shark-yel: #ffc800;
+  --token-rgb-secondary: 241, 97, 30;
+  --token-rgb-primary: 230, 193, 70;
   /* --framer-will-change-override: none; */
 }
 
@@ -143,6 +153,9 @@ body {
 :root {
   --euro-animation-duration: 3s;
   --euro-blinking-duration: 5s;
+  --hover-animation-delay:0.3s;
+  --hover-animation-type:linear;
+  --focus-border-color:rgba(52, 152, 219, 0.4);
 }
 
 /* Animation for Formular-button */
@@ -166,10 +179,16 @@ html {
 }
 
 h2 {
-  font-size: var(--fs-title);
-  font-weight: var(--fw-bold);
+  font-size: var(--fs-subtitle);
+  font-weight: var(--fw-semiBold);
+  text-align: center;
 }
 
 h4 {
   font-size: 22px;
 }
+
+body.show {
+ overflow: hidden;
+}
+
