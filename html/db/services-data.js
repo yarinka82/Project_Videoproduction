@@ -7,19 +7,19 @@ export const cards = [
     examples_items: [
       {
         text: 'Werbespots',
-        icon:''
+        icon:'icon-werbespots'
        },
       {
         text: 'Imagefilme',
-        icon:''
+        icon:'icon-imagefilme'
        },
       {
         text: 'Recruiting-Videos',
-        icon:''
+        icon:'icon-recruiting-videos'
       },
       {
         text: 'Produktvideos',
-        icon:''
+        icon:'icon-prod-videos'
        }
     ],
   },
@@ -31,15 +31,15 @@ export const cards = [
     examples_items: [
       {
         text: 'Instagram — Reels',
-        icon:''
+        icon:'icon-instagram-reels'
        },
       {
         text: 'TikTok – Videos',
-        icon:''
+        icon:'icon-tiktok'
        },
       {
         text: 'YouTube – Long-Formate und Shorts',
-        icon:''
+        icon:'icon-youtube'
       }
     ],
   },
@@ -51,15 +51,15 @@ export const cards = [
     examples_items: [
       {
         text: 'YouTube-Kanal-Management',
-        icon:''
+        icon:'icon-youtube'
        },
       {
         text: 'Instagram-Management',
-        icon:''
+        icon:'icon-instagram-reels'
        },
       {
         text: 'TikTok-Management',
-        icon:''
+        icon:'icon-tiktok'
       }
     ],
   }

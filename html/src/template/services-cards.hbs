@@ -5,14 +5,17 @@
       <h3 class="service-card-content-header">{{this.title}}</h3>
       <p class="service-card-content-text"><b>{{this.sub_title}}</b></>
       <p class="service-card-content-text pre-line">{{this.description}}</p>
+      <div class="service-card-content-list-thumb">
       <h4 class="service-card-content-list-title">{{this.examples_title}}</h4>
       <ul class="service-card-content-list">
         {{#each this.examples_items}}
-        <li class="service-card-content-list-item" style="--icon: url('../img/{{this.icon}}')">
+        <li class="service-card-content-list-item">
+          <svg><use href="./src/img/sprite.svg#{{this.icon}}"/></svg>
           {{this.text}}
         </li>
         {{/each}}
-      </ul>
+        </ul>
+      </div>
     </article>
   </li>
   {{/each}}
