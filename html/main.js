@@ -9,6 +9,7 @@ import { initPortfolio } from './src/js/slaider/portfolio.js';
 import { btnRedirect } from './src/js/utils/btnRedirect.js';
 import { baseUrl } from './src/js/service.js';
 import { makeProblemsSectionMarkup } from './src/js/problems/makeProblemsSection.js';
+import { initFormularModal } from './src/js/formular/formular.js';
 
 // Partials bundlingh
 await loadHTML(BLOCK_TYPE.HEADER, './src/partials/header.html');
@@ -19,6 +20,7 @@ await loadHTML(BLOCK_TYPE.SECTION, './src/partials/portfolio.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/our_company.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/blog.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/faq.html');
+await loadHTML(BLOCK_TYPE.SECTION, './src/partials/formular.html');
 await loadHTML(BLOCK_TYPE.FOOTER, './src/partials/footer.html');
 
 // Header
@@ -34,6 +36,11 @@ makeAdvantagesSectionMarkup(
 // Portfolio
 //fetchVideos();
 initializeCategoryToggle();
+// initFormularModal();
+
+// Formular 
+initFormularModal();
+
 
 setTimeout(() => {
   initFaq();
