@@ -24,10 +24,11 @@ await loadHTML(BLOCK_TYPE.SECTION, './src/partials/portfolio.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/work_steps.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/services.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/our_company.html');
+// await loadHTML(BLOCK_TYPE.SECTION, './src/partials/blog.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/faq.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/formular.html');
 await loadHTML(BLOCK_TYPE.FOOTER, './src/partials/footer.html');
-await loadHTML(BLOCK_TYPE.MODAL, './src/partials/formular.html');
+
 
 // Header
 onHeaderLoad();
@@ -45,6 +46,11 @@ makeServicesSectionMarkup('services-glr','./src/template/services-cards.hbs');
 // Portfolio
 //fetchVideos();
 initializeCategoryToggle();
+// initFormularModal();
+
+// Formular 
+initFormularModal();
+
 
 setTimeout(() => {
   initFaq();
