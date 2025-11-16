@@ -2,6 +2,7 @@
   padding: 128px 20px;
   max-width: 100%;
   text-align: center;
+  background-color: var(--bgcolor-secondary);
 }
 
 .portfolio-info {
