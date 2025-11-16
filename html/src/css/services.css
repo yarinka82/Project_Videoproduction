@@ -1,3 +1,6 @@
+.services {
+  background-color: var(--bgcolor-secondary);
+}
 .services-title {
   font-style: normal;
   font-weight: var(--fw-semiBold);
