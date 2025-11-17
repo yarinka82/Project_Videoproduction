@@ -54,6 +54,11 @@ export function initFormularModal() {
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      if (submitBtn) submitBtn.disabled = true;
+
       const formData = new FormData(form);
       const plainData = Object.fromEntries(formData.entries());
 
@@ -74,16 +79,16 @@ export function initFormularModal() {
           '🚀 ~ initFormularModal ~ ${BASE_URL}/inquiry/:',
           `${BASE_URL}/inquiry/`
         );
-        fetch(`${BASE_URL}/inquiry/`, {
+        await fetch(`${BASE_URL}/inquiry/`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(plainData),
-        }).catch((err) => {
-          console.warn('⚠️ Konnte Anfrage nicht an Backend senden:', err);
         });
       } catch (error) {
         console.error('❌ Fehler beim Senden über Formspree:', error);
         alert('Fehler beim Senden. Bitte versuchen Sie es später erneut.');
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
       }
     });
   }
