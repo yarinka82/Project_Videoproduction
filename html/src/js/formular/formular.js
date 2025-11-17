@@ -2,13 +2,11 @@ import { BASE_URL } from '../service.js';
 
 export function initFormularModal() {
   const modal = document.getElementById('formular-modal');
-  const closeBtn = modal?.querySelector('.close-button');
+  // const closeBtn = modal?.querySelector('.close-button');
   const form = document.getElementById('inquiry-form');
   const body = document.body;
-  const BASE_URL = "https://your-backend-url.com"; // change to your backend URL
 
-  if (!modal || !closeBtn) return;
-
+  // if (!modal || !closeBtn) return;
 
   // const openModal = () => {
   //   modal.classList.remove('modal-hidden');
@@ -18,7 +16,6 @@ export function initFormularModal() {
   //   });
   //   history.pushState({}, '', '#formular');
   // };
-
 
   // const closeModal = () => {
   //   modal.classList.remove('show');
@@ -50,11 +47,9 @@ export function initFormularModal() {
   //   }
   // });
 
-  
-
-  window.addEventListener('popstate', () => {
-    window.location.hash === '#formular' ? openModal() : closeModal();
-  });
+  // window.addEventListener('popstate', () => {
+  //   window.location.hash === '#formular' ? openModal() : closeModal();
+  // });
 
   if (form) {
     form.addEventListener('submit', async (e) => {
@@ -73,7 +68,7 @@ export function initFormularModal() {
 
         alert('✅ Anfrage erfolgreich gesendet!');
         form.reset();
-        closeModal();
+        // closeModal();
 
         console.log(
           '🚀 ~ initFormularModal ~ ${BASE_URL}/inquiry/:',
