@@ -11,7 +11,7 @@ import { baseUrl } from './src/js/service.js';
 import { makeProblemsSectionMarkup } from './src/js/problems/makeProblemsSection.js';
 import { loadSvgSafely } from './src/js/presentation/presentation.js';
 import { initFormularModal } from './src/js/formular/formular.js';
-import { flipWorkStepCard } from './src/js/work-steps/flipWorkStepCard.js'
+import { flipWorkStepCard } from './src/js/work-steps/flipWorkStepCard.js';
 import { makeServicesSectionMarkup } from './src/js/services/makeServicesSection.js';
 
 // Partials bundlingh
@@ -29,11 +29,8 @@ await loadHTML(BLOCK_TYPE.SECTION, './src/partials/faq.html');
 await loadHTML(BLOCK_TYPE.SECTION, './src/partials/formular.html');
 await loadHTML(BLOCK_TYPE.FOOTER, './src/partials/footer.html');
 
-
 // Header
 onHeaderLoad();
-
-initFormularModal();
 
 // Section rendering
 makeProblemsSectionMarkup('problems-glr', './src/template/problems-cards.hbs');
@@ -41,16 +38,14 @@ makeAdvantagesSectionMarkup(
   'advantages-glr',
   './src/template/advantage-cards.hbs'
 );
-makeServicesSectionMarkup('services-glr','./src/template/services-cards.hbs');
+makeServicesSectionMarkup('services-glr', './src/template/services-cards.hbs');
 
 // Portfolio
 //fetchVideos();
 initializeCategoryToggle();
-// initFormularModal();
 
-// Formular 
+// Formular
 initFormularModal();
-
 
 setTimeout(() => {
   initFaq();

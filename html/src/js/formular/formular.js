@@ -2,13 +2,11 @@ import { BASE_URL } from '../service.js';
 
 export function initFormularModal() {
   const modal = document.getElementById('formular-modal');
-  const closeBtn = modal?.querySelector('.close-button');
+  // const closeBtn = modal?.querySelector('.close-button');
   const form = document.getElementById('inquiry-form');
   const body = document.body;
-  const BASE_URL = "https://your-backend-url.com"; // change to your backend URL
 
-  if (!modal || !closeBtn) return;
-
+  // if (!modal || !closeBtn) return;
 
   // const openModal = () => {
   //   modal.classList.remove('modal-hidden');
@@ -18,7 +16,6 @@ export function initFormularModal() {
   //   });
   //   history.pushState({}, '', '#formular');
   // };
-
 
   // const closeModal = () => {
   //   modal.classList.remove('show');
@@ -50,15 +47,18 @@ export function initFormularModal() {
   //   }
   // });
 
-  
-
-  window.addEventListener('popstate', () => {
-    window.location.hash === '#formular' ? openModal() : closeModal();
-  });
+  // window.addEventListener('popstate', () => {
+  //   window.location.hash === '#formular' ? openModal() : closeModal();
+  // });
 
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      if (submitBtn) submitBtn.disabled = true;
+
       const formData = new FormData(form);
       const plainData = Object.fromEntries(formData.entries());
 
@@ -73,22 +73,22 @@ export function initFormularModal() {
 
         alert('✅ Anfrage erfolgreich gesendet!');
         form.reset();
-        closeModal();
+        // closeModal();
 
         console.log(
           '🚀 ~ initFormularModal ~ ${BASE_URL}/inquiry/:',
           `${BASE_URL}/inquiry/`
         );
-        fetch(`${BASE_URL}/inquiry/`, {
+        await fetch(`${BASE_URL}/inquiry/`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(plainData),
-        }).catch((err) => {
-          console.warn('⚠️ Konnte Anfrage nicht an Backend senden:', err);
         });
       } catch (error) {
         console.error('❌ Fehler beim Senden über Formspree:', error);
         alert('Fehler beim Senden. Bitte versuchen Sie es später erneut.');
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
       }
     });
   }
