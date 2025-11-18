@@ -9,6 +9,13 @@ import { updatePagination } from './updatePagination.js';
 let currentPage = 1;
 export const perPage = 3;
 
+let categories = [];
+
+export function getCategories() {
+  return categories;
+}
+// const fetchedCategories = getCategories();
+
 export function initPortfolio() {
   startObserver(
     '.portfolio-subtitle',
@@ -24,7 +31,7 @@ export function initPortfolio() {
       });
 
       renderVideos(videos, lengthBackend);
-      await fetchCategory();
+      categories = await fetchCategory();
       updatePagination({
         page: pagination.current_page,
         totalPages: pagination.total_pages,

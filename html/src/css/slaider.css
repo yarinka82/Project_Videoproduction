@@ -11,9 +11,18 @@
   transform: translateX(0);
 }
 
+.gallery-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
 .video-container {
   position: relative;
   gap: 10px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .video-container iframe {

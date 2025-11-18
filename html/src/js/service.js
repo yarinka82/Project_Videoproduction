@@ -24,7 +24,7 @@ export async function getApi(endpoint, baseList, options = {}) {
     const response = await fetch(url, defaultOptions);
     const res = await response.json();
     const lengthBackend = res.list.length;
-    if (res.status === 200 && length > 0) {
+    if (res.status === 200 && lengthBackend > 0) {
       if (res.pagination)
         pagination = {
           current_page: res.pagination.page,
