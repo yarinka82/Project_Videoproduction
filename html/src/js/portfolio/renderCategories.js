@@ -1,4 +1,5 @@
 import { fetchCategory } from '../slaider/fetchCategory.js';
+import { getCategories } from '../slaider/portfolio.js';
 import { handleCategoryClick } from './handleCategoryClick.js';
 
 let cachedCategories = [];
@@ -11,7 +12,8 @@ export async function renderCategories() {
 
   categoriesList.innerHTML = '';
 
-  const fetchedCategories = await fetchCategory();
+  // const fetchedCategories = await fetchCategory();
+  const fetchedCategories = getCategories();
 
   const isListSame =
     cachedCategories.length === fetchedCategories.length &&

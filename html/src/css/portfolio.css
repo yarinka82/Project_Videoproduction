@@ -113,7 +113,7 @@
 
 .gallery-categories {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 60px;
   z-index: 2;
   padding: 12px 8px;
@@ -133,11 +133,7 @@
   opacity: 1;
   will-change: transform;
   transform: none;
-  transform-origin: 50% 50% 0px;
-
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  transform: translateX(-50%);
 }
 
 .category-item {
