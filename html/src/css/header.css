@@ -81,13 +81,14 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
+  color: var(--color-text-white);
   transition: color var(--hover-animation-delay) var(--hover-animation-type);
 }
 
 .header-navigation-link:hover,
 .header-contacts-link:hover,
 .header-navigation-link:focus {
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
 }
 
 .header-navigation-link:focus,
@@ -151,6 +152,7 @@
   display: inline-block;
   width: 20px;
   height: 20px;
+  color: var(--color-text-white);
   transition: color var(--hover-animation-delay) var(--hover-animation-type);
 }
 
