@@ -14,7 +14,6 @@ let categories = [];
 export function getCategories() {
   return categories;
 }
-// const fetchedCategories = getCategories();
 
 export function initPortfolio() {
   startObserver(

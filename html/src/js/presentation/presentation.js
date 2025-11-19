@@ -177,7 +177,7 @@ export async function initAnimation() {
 
   videos.forEach((video) => {
     video.addEventListener('mouseenter', () => {
-      video.play();
+      if (video.readyState >= 2) video.play().catch(() => {});
       isPaused = true;
     });
 
@@ -233,7 +233,8 @@ export async function initAnimation() {
     const sectionRect = section.getBoundingClientRect();
     const socialRect = socialContainer.getBoundingClientRect();
 
-    const isMobile = window.innerWidth < 1024;
+    const isMobile = window.innerWidth < 768;
+    const isTablet = window.innerWidth >= 768 && window.innerWidth < 1200;
 
     let startX, startY;
 
@@ -254,6 +255,10 @@ export async function initAnimation() {
         partWidth / 2 -
         sectionRect.left;
       startY = listRect.bottom + 60 - sectionRect.top;
+    } else if (isTablet) {
+      startX = videoRect.left + videoRect.width / 2 - sectionRect.left;
+      startY =
+        (h4 ? h4Rect.bottom + 20 : videoRect.bottom + 65) - sectionRect.top;
     } else {
       startX = videoRect.left + videoRect.width / 2 - sectionRect.left;
       startY =
@@ -329,7 +334,7 @@ export async function initAnimation() {
 
     const centerX = socialRect.left + socialRect.width / 2 - sectionRect.left;
     const centerY =
-      socialRect.top + socialRect.height / 2 - sectionRect.top + 20;
+      socialRect.top + socialRect.height / 2 - sectionRect.top + 50;
 
     const baseRadius = radiusOuter + 0;
     const minRadius = 25;
