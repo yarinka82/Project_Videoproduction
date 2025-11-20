@@ -21,7 +21,15 @@
 }
 
 .our_company-list {
-  display: grid;
+  /* display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  justify-items: center;
+  margin-bottom: 80px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
   grid-template-columns: 1fr;
   gap: 40px;
   justify-items: center;
