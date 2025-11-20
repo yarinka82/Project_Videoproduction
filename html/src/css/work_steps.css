@@ -97,7 +97,7 @@
   width: 100%;
   text-align: center;
   align-items: center;
-  font-size: var(--fs-subtitle);
+  font-size: 32px;
   font-weight: 400;
   line-height: 1.2;
   color: var(--token-9c682c5f-cdc7-48a3-8e8c-85c4246e47a4);
@@ -173,11 +173,11 @@
   }
 
   .work-steps-oneStep-card:nth-child(2) .work-steps-oneStep-card-inner {
-    transition-delay: 1s;
+    transition-delay: 1.2s;
   }
 
   .work-steps-oneStep-card:nth-child(3) .work-steps-oneStep-card-inner {
-    transition-delay: 1.8s;
+    transition-delay: 1.6s;
   }
 
   .work-steps-oneStep-card:nth-child(4) .work-steps-oneStep-card-inner {
