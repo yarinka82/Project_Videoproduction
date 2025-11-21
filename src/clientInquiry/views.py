@@ -31,7 +31,7 @@ def create_inquiry(request):
         return JsonResponse({"error": "Invalid email format"}, status=400)
 
     message = data.get("message", "").strip()
-    company = (data.get("company") or "").strip() 
+    company = (data.get("company") or "").strip()
 
     inquiry = ClientInquiry.objects.create(
         name=data["name"].strip(),
