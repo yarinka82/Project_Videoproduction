@@ -1,0 +1,39 @@
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  padding: 3px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  z-index: 999;
+  border-radius: 50%;
+  background-color: transparent;
+
+  @media (min-width: 768px) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.scroll-to-top.show {
+  display: block;
+  fill: var(--color-text-primary);
+  padding: 3px;
+  border: 1px solid var(--color-text-primary);
+
+  &:hover {
+    scale: 1.1;
+    box-shadow: 1px 1px 12px var(--color-text-primary);
+    animation: shadowPulse 5s linear infinite;
+  }
+
+  @media (min-width: 768px) {
+    padding: 6px;
+  }
+}
+
+.icon-scroll-to-top {
+  width: 100%;
+  height: 100%;
+}

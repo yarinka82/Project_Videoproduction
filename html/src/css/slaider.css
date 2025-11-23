@@ -307,18 +307,18 @@
 
 @keyframes shadowPulse {
   0% {
-    box-shadow: 0 0 10px var(--token-c6e98fbd-6551-4a23-b582-f27b355c7007);
+    box-shadow: 0 0 8px var(--color-text-primary);
   }
   25% {
-    box-shadow: 0 0 10px 3px var(--token-c6e98fbd-6551-4a23-b582-f27b355c7007);
+    box-shadow: 0 0 8px 3px var(--color-text-primary);
   }
   50% {
-    box-shadow: 0 0 10px 6px var(--token-c6e98fbd-6551-4a23-b582-f27b355c7007);
+    box-shadow: 0 0 8px 6px var(--color-text-primary);
   }
   75% {
-    box-shadow: 0 0 10px 3px var(--token-c6e98fbd-6551-4a23-b582-f27b355c7007);
+    box-shadow: 0 0 8px 3px var(--color-text-primary);
   }
   100% {
-    box-shadow: 0 0 10px var(--token-c6e98fbd-6551-4a23-b582-f27b355c7007);
+    box-shadow: 0 0 8px var(--color-text-primary);
   }
 }

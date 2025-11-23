@@ -13,6 +13,7 @@ import { loadSvgSafely } from './src/js/presentation/presentation.js';
 import { initFormularModal } from './src/js/formular/formular.js';
 import { flipWorkStepCard } from './src/js/work-steps/flipWorkStepCard.js';
 import { makeServicesSectionMarkup } from './src/js/services/makeServicesSection.js';
+import { initScrollToTop } from './src/js/scroll-to-top/scroll-to-top.js';
 
 // Partials bundlingh
 await loadHTML(BLOCK_TYPE.HEADER, './src/partials/header.html');
@@ -58,3 +59,5 @@ btnRedirect(buttons, baseUrl);
 
 //Work steps section
 flipWorkStepCard();
+
+initScrollToTop();
