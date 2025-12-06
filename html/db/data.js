@@ -11,7 +11,7 @@ export const cards = [
         text:'Aus Interessenten werden Kunden'
       },
       { id: 2,
-        text:'60 Sekunden die überzeugen'},
+        text:'Überzeugen in kurzer Zeit'},
       { id: 3,
         text:'Enorme Reichweite und Sichtbarkeit'}
     ]
