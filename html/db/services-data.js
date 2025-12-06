@@ -44,7 +44,7 @@ export const cards = [
     ],
   },
   {
-    title: 'Kanalmanagement',
+    title: 'YouTube-Kanal Produktion',
     sub_title:'Wir verwandeln Ihren Content in ein systematisches Wachstumsinstrument.',
     description: 'Vollständige Kanalbetreuung: Strategie, Content-Plan, Drehs, Schnitt, Veröffentlichungen und Analyse. \n Sie erhalten einen Kanal, der wächst – und nicht einfach nur existiert.',
     examples_title:'Richtungen',
