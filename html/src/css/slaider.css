@@ -24,6 +24,7 @@
   width: 100%;
   min-width: 280px;
   max-width: 310px;
+  background-color: transparent;
 }
 
 .video-container iframe {
