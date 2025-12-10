@@ -20,5 +20,7 @@ export async function fetchVideo({ page = 1, perPage, category = null }) {
   }
 
   const { list, pagination, lengthBackend } = await getApi(url, exampleVideos);
+  console.log('🚀 ~ fetchVideo ~ list:', list);
+  console.log('🚀 ~ fetchVideo ~ exampleVideos:', exampleVideos);
   return { list, pagination, lengthBackend };
 }

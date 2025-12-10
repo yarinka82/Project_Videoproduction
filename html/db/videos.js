@@ -1,34 +1,49 @@
 export const exampleVideos = [
   {
-    title: 'Video 1',
-    source: 'youtube',
-    id: 7,
-    url: 'https://www.youtube-nocookie.com/embed/CjO9JVlbQSM?rel=0&modestbranding=1',
-    preview: 'https://img.youtube.com/vi/CjO9JVlbQSM/hqdefault.jpg',
+    title: 'Barber1',
+    source: 'gdrive',
+    id: 1,
+    url: 'https://drive.google.com/file/d/1L8lzvGphOug9dP2cGX5poYXx8JlFRNtE/preview',
+    preview:
+      'https://drive.google.com/thumbnail?id=1L8lzvGphOug9dP2cGX5poYXx8JlFRNtE',
     category: {
       id: 2,
-      name: 'Von allem etwas',
+      name: 'Barber',
     },
   },
   {
-    title: 'Video 2',
-    source: 'youtube',
-    id: 8,
-    url: 'https://www.youtube-nocookie.com/embed/toJEvF6L1Yk?rel=0&modestbranding=1',
-    preview: 'https://img.youtube.com/vi/toJEvF6L1Yk/hqdefault.jpg',
+    title: 'Immobilie',
+    source: 'gdrive',
+    id: 10,
+    url: 'https://drive.google.com/file/d/1QUXIXU9Bid8Sc_-ljwM1R2FiCZJcLUyZ/preview',
+    preview:
+      'https://drive.google.com/thumbnail?id=1QUXIXU9Bid8Sc_-ljwM1R2FiCZJcLUyZ',
     category: {
-      id: 14,
+      id: 1,
       name: 'Allgemein',
     },
   },
   {
-    title: 'Video 3',
-    source: 'youtube',
-    id: 9,
-    url: 'https://www.youtube-nocookie.com/embed/UQPqg4gSSXc?rel=0&modestbranding=1',
-    preview: 'https://img.youtube.com/vi/UQPqg4gSSXc/hqdefault.jpg',
+    title: 'Marketingkonferenz1',
+    source: 'gdrive',
+    id: 11,
+    url: 'https://drive.google.com/file/d/123DQvd3wkh0GKO9QwHzaRAozsm-_AZPg/preview',
+    preview:
+      'https://drive.google.com/thumbnail?id=123DQvd3wkh0GKO9QwHzaRAozsm-_AZPg',
     category: {
-      id: 14,
+      id: 4,
+      name: 'Marketingkonferenz',
+    },
+  },
+  {
+    title: 'M\u00fcnchen',
+    source: 'gdrive',
+    id: 15,
+    url: 'https://drive.google.com/file/d/1Ppe3a2gl2cbztUgU0yMvp4CgTRUGtxUb/preview',
+    preview:
+      'https://drive.google.com/thumbnail?id=1Ppe3a2gl2cbztUgU0yMvp4CgTRUGtxUb',
+    category: {
+      id: 1,
       name: 'Allgemein',
     },
   },
