@@ -1,6 +1,6 @@
 .our_company {
   background-color: var(--bgcolor-primary);
-  color: var(--color-text-white);
+  color: var(--color-text-primary);
   /* padding: 80px 0; */
 
   overflow: hidden;
@@ -15,8 +15,8 @@
   font-size: var(--fs-title);
   font-weight: var(--fw-bold);
   margin-bottom: 60px;
-  color: var(--color-text-white);
-  text-shadow: 0 0 18px var(--token-448be32f-5ce2-4083-9bd4-714d017438ce);
+  color: var(--color-text-primary);
+  /* text-shadow: 0 0 18px rgba(224, 248, 5, 0.911); */
   text-align: center;
 }
 
@@ -54,7 +54,7 @@
   height: 260px;
   border-radius: 10px;
   object-fit: cover;
-  border: 2px solid rgba(238, 70, 106, 0.76);
+  border: 2px solid rgba(221, 216, 211, 0.979);
   margin-bottom: 20px;
 }
 
@@ -62,7 +62,7 @@
   font-size: 20px;
   font-weight: var(--fw-semiBold);
   color: var(--color-text-white);
-  text-shadow: 0 0 18px var(--token-448be32f-5ce2-4083-9bd4-714d017438ce);
+  text-shadow: 0 0 18px var(--token-eb7b6d97-3952-433e-81bb-c192cbbf1822);
   text-align: center;
   margin-bottom: 5px;
 }

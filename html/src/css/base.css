@@ -61,7 +61,7 @@ body {
   );
   --card-bg-color: radial-gradient(
     50% 31% at 50% 0%,
-    rgb(231, 179, 8) 0%,
+    rgb(252, 120, 12) 0%,
     /* rgb(0, 153, 255) 0%, */ rgb(17, 17, 17) 100%
   );
   --image-border-color: radial-gradient(
