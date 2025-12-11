@@ -4,7 +4,7 @@
   align-items: center;
   padding: 80px 20px 40px 20px;
   background-color: var(--bgcolor-secondary);
-  color: var(--color-text-white);
+  color: var(--color-text-primary);
   position: relative;
   overflow: hidden;
   font-family: var(--font-family);
@@ -37,17 +37,17 @@
   margin-bottom: 20px;
 }
 
-.hero-title span {
+/* .hero-title span {
   color: var(--color-text-white);
   text-shadow: 0 0 18px var(--token-eb7b6d97-3952-433e-81bb-c192cbbf1822);
-}
+} */
 
 .hero-text {
   margin: 25px 0 40px;
   font-size: 16px;
   font-weight: var(--fw-medium);
   line-height: 1.7;
-  color: var(--color-text-primary);
+  color: var(--color-text-white);
   max-width: 540px;
 }
 
@@ -55,10 +55,10 @@
   font-size: var(--fs-secondary);
   line-height: 1.4;
   font-weight: var(--fw-semiBold);
-  color: var(--color-text-white);
+  color: var(--color-text-secondary);
   max-width: 540px;
   margin-bottom: 40px;
-  text-shadow: 0 0 18px var(--token-96e3aee0-df31-47ca-b20e-57841f0289ac);
+  /* text-shadow: 0 0 18px var(--token-9c682c5f-cdc7-48a3-8e8c-85c4246e47a4); */
 }
 
 /*  FORMULAR LINK  */
@@ -122,7 +122,7 @@
   background-size: cover;
   background-position: center;
   border-radius: 12px;
-  box-shadow: 0 0 40px rgba(238, 183, 238, 0.863);
+  box-shadow: 0 0 40px rgb(247, 99, 0);
 }
 
 /* PLAY BUTTON  */
@@ -131,30 +131,30 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(228, 55, 190, 0.274);
-  border: 2px solid var(--token-a235945a-b267-4393-9124-089017da9783);
+  background: rgba(247, 99, 0, 0.582);
+  border: 2px solid var(--token-5eca0a17-f797-456c-bac5-efdeaeff0c0b);
   width: 100px;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  font-size: 28px;
-  color: var(--token-eb7b6d97-3952-433e-81bb-c192cbbf1822);
+  font-size: 36px;
+  color: var(--token-5eca0a17-f797-456c-bac5-efdeaeff0c0b);
   cursor: pointer;
   transition: background 0.3s ease;
   animation: pulse 2s infinite;
 }
 
 .hero-play:hover {
-  background: rgba(255, 166, 0, 0.5);
+  background: rgba(251, 255, 0, 0.425);
 }
 
 /*  PULSE ANIMATION  */
 @keyframes pulse {
   0% {
     transform: translate(-50%, -50%) scale(1);
-    box-shadow: 0 0 0 0 rgba(232, 164, 241, 0.37);
+    box-shadow: 0 0 0 0 rgba(233, 231, 233, 0.37);
   }
   70% {
     transform: translate(-50%, -50%) scale(1.05);
