@@ -111,9 +111,9 @@ body {
 
   --color-text-primary: #f57309; /* <p> */
   /* --color-text-primary: #9ca3af; <p> */
-  --color-text-secondary: #f4f4f6; /* <h3> */
+  --color-text-secondary: #9ca3af; /* <h3> */
   --color-text-black: #000; /* <h2> */
-  --color-text-white: #fff; /* <h1> */
+  --color-text-white: #ffff; /* <h1> */
 }
 
 /* === Shadows === */
