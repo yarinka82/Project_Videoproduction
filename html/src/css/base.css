@@ -38,13 +38,13 @@ body {
   --link-bg-color: linear-gradient(
     201deg,
     rgb(230, 193, 70) 0%,
-    rgb(172, 15, 81) 100% /* rgb(102, 203, 255) 0%,
+    rgb(255, 94, 1) 100% /* rgb(102, 203, 255) 0%,
     rgb(0, 76, 148) 100% */
   );
   --hoveredlink-bg-color: linear-gradient(
     270deg,
-    rgb(230, 184, 125) -32%,
-    rgb(203, 0, 118) 100% /* rgb(102, 203, 255) -32%, */
+    rgb(255, 94, 1) 100%,
+    rgb(230, 193, 70) 0% /* rgb(102, 203, 255) -32%, */
       /* rgb(0, 134, 203) 100% */
   );
   --line-color: linear-gradient(
