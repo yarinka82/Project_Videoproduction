@@ -1,11 +1,17 @@
+let initialized = false;
+
 export function btnRedirect(buttons, baseUrl) {
+  if (initialized) return;
+  initialized = true;
+
   const clickCounts = new Map();
   let activeButton = null;
 
   buttons.forEach((button) => {
     clickCounts.set(button, 0);
 
-    button.addEventListener("click", (e) => {
+    button.addEventListener('pointerdown', (e) => {
+      if (!e.isPrimary) return;
       e.stopPropagation();
 
       if (activeButton !== button) {
@@ -20,8 +26,8 @@ export function btnRedirect(buttons, baseUrl) {
         const endpoint = button.dataset.endpoint;
         window.open(
           `${baseUrl}/admin/${endpoint}`,
-          "_blank",
-          "noopener,noreferrer"
+          '_blank',
+          'noopener,noreferrer'
         );
         clickCounts.set(button, 0);
         activeButton = null;
@@ -29,7 +35,7 @@ export function btnRedirect(buttons, baseUrl) {
     });
   });
 
-  document.addEventListener("click", () => {
+  document.addEventListener('pointerdown', () => {
     if (activeButton) {
       clickCounts.set(activeButton, 0);
       activeButton = null;
