@@ -25,6 +25,7 @@
   padding: 16px 32px 32px 32px;
   border-radius: 32px;
   max-height: 450px;
+  background-color: rgba(17, 24, 38);
 }
 
 .header-navigation {
