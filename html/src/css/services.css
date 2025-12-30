@@ -158,16 +158,6 @@
     margin-bottom: 0;
   }
 
-  .services-list-item:nth-of-type(2) {
-    position: relative;
-    transform: translateY(40px);
-  }
-
-  .services-list-item:nth-of-type(3) {
-    position: relative;
-    transform: translateY(80px);
-  }
-
   .service-card {
     height: 100%;
   }
