@@ -54,16 +54,16 @@ export const cards = [
     examples_title: 'Richtungen:',
     examples_items: [
       {
-        text: 'YouTube-Kanal-Management',
+        text: 'YouTube-Marketing',
         icon: 'icon-youtube',
       },
       {
-        text: 'Instagram-Management',
-        icon: 'icon-instagram-reels',
+        text: 'YouTube-Produktion',
+        icon: 'icon-youtube',
       },
       {
-        text: 'TikTok-Management',
-        icon: 'icon-tiktok',
+        text: 'YouTube-Aufnahmen',
+        icon: 'icon-youtube',
       },
     ],
   },
