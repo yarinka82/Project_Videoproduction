@@ -166,7 +166,8 @@
   color: var(--token-9c682c5f-cdc7-48a3-8e8c-85c4246e47a4);
   background-image: var(--link-bg-color);
   text-decoration: none;
-  border: 1px solid var(--token-a235945a-b267-4393-9124-089017da9783);
+  /* border: 1px solid var(--token-a235945a-b267-4393-9124-089017da9783); */
+  border: transparent;
   border-radius: 10px;
   box-shadow: var(--formular-link-shadow);
   overflow: hidden;
