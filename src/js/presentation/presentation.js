@@ -6,22 +6,22 @@ const EFFECT_COLOR = {
 
 function getColor(alpha) {
   return (
-    'rgba(' +
+    "rgba(" +
     EFFECT_COLOR.r +
-    ', ' +
+    ", " +
     EFFECT_COLOR.g +
-    ', ' +
+    ", " +
     EFFECT_COLOR.b +
-    ', ' +
+    ", " +
     alpha +
-    ')'
+    ")"
   );
 }
 
 const icons = [
-  { id: 'iconTop', name: 'icon-instagram' },
-  { id: 'iconLeft', name: 'icon-facebook' },
-  { id: 'iconRight', name: 'icon-tik-tok' },
+  { id: "iconTop", name: "icon-instagram" },
+  { id: "iconLeft", name: "icon-facebook" },
+  { id: "iconRight", name: "icon-tik-tok" },
 ];
 
 export async function loadSvgSafely() {
@@ -65,18 +65,18 @@ export async function loadSvgSafely() {
     </a>
     </li>
     <li class="social-icon" id="iconRight">
-    <a class="icon-link">
-      <svg id="tik-tok" xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" 
-      viewBox="0 0 256 256" xml:space="preserve">
-<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-	<path d="M 45 90 L 45 90 C 20.147 90 0 69.853 0 45 v 0 C 0 20.147 20.147 0 45 0 h 0 c 24.853 0 45 20.147 45 45 v 0 C 90 69.853 69.853 90 45 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
-	<path d="M 10.788 10.677 v -0.511 c -0.177 -0.025 -0.356 -0.038 -0.535 -0.039 c -2.189 0 -3.97 1.781 -3.97 3.97 c 0 1.343 0.671 2.531 1.695 3.25 c -0.685 -0.733 -1.067 -1.699 -1.066 -2.703 C 6.913 12.487 8.643 10.727 10.788 10.677" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,242,234); fill-rule: nonzero; opacity: 1;" transform=" matrix(3.89 0 0 3.89 -1.9444444444444287 -1.9444444444444287) " stroke-linecap="round"/>
-	<path d="M 10.882 16.457 c 0.977 0 1.773 -0.777 1.81 -1.745 l 0.003 -8.643 h 1.579 c -0.034 -0.181 -0.051 -0.364 -0.051 -0.547 h -2.157 l -0.004 8.643 c -0.036 0.968 -0.833 1.745 -1.809 1.745 c -0.293 0 -0.582 -0.071 -0.841 -0.208 C 9.752 16.176 10.299 16.457 10.882 16.457 M 17.223 9.003 v -0.48 c -0.58 0.001 -1.148 -0.168 -1.634 -0.486 C 16.015 8.527 16.589 8.866 17.223 9.003" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,242,234); fill-rule: nonzero; opacity: 1;" transform=" matrix(3.89 0 0 3.89 -1.9444444444444287 -1.9444444444444287) " stroke-linecap="round"/>
-	<path d="M 15.59 8.037 c -0.476 -0.545 -0.738 -1.244 -0.738 -1.967 h -0.578 C 14.425 6.878 14.9 7.588 15.59 8.037 M 10.253 12.284 c -1.001 0.001 -1.812 0.812 -1.813 1.813 c 0.001 0.674 0.375 1.292 0.972 1.605 c -0.223 -0.308 -0.343 -0.677 -0.343 -1.057 c 0.001 -1.001 0.812 -1.812 1.813 -1.813 c 0.187 0 0.366 0.031 0.535 0.084 v -2.202 c -0.177 -0.025 -0.356 -0.038 -0.535 -0.039 c -0.031 0 -0.062 0.002 -0.094 0.002 v 1.691 C 10.615 12.313 10.435 12.285 10.253 12.284" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,0,79); fill-rule: nonzero; opacity: 1;" transform=" matrix(3.89 0 0 3.89 -1.9444444444444287 -1.9444444444444287) " stroke-linecap="round"/>
-	<path d="M 17.223 9.003 v 1.676 c -1.118 0 -2.154 -0.358 -3 -0.965 v 4.383 c 0 2.189 -1.78 3.97 -3.969 3.97 c -0.846 0 -1.63 -0.267 -2.275 -0.72 c 0.749 0.808 1.801 1.267 2.903 1.267 c 2.189 0 3.97 -1.781 3.97 -3.969 v -4.383 c 0.874 0.629 1.924 0.966 3 0.965 V 9.07 C 17.636 9.07 17.426 9.046 17.223 9.003" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,0,79); fill-rule: nonzero; opacity: 1;" transform=" matrix(3.89 0 0 3.89 -1.9444444444444287 -1.9444444444444287) " stroke-linecap="round"/>
-	<path d="M 14.223 14.097 V 9.714 c 0.874 0.629 1.924 0.966 3 0.965 V 9.003 c -0.635 -0.137 -1.208 -0.476 -1.634 -0.966 C 14.9 7.588 14.425 6.878 14.274 6.07 h -1.579 l -0.003 8.643 c -0.036 0.968 -0.833 1.745 -1.81 1.745 c -0.583 -0.001 -1.13 -0.282 -1.469 -0.756 c -0.597 -0.313 -0.971 -0.931 -0.972 -1.605 c 0.001 -1.001 0.812 -1.812 1.813 -1.813 c 0.186 0 0.366 0.031 0.535 0.084 v -1.691 c -2.146 0.05 -3.876 1.81 -3.876 3.968 c 0 1.043 0.405 1.993 1.066 2.703 c 0.666 0.469 1.461 0.72 2.275 0.719 C 12.442 18.067 14.223 16.286 14.223 14.097" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(3.89 0 0 3.89 -1.9444444444444287 -1.9444444444444287) " stroke-linecap="round"/>
-</g>
+    <a class="icon-link" href="https://www.linkedin.com/in/dmytro-zhulyk-716545365" target="_blank" rel="noopener noreferrer">
+       <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  role="img"
+  aria-label="LinkedIn">
+  <title>LinkedIn</title>
+  <circle cx="12" cy="12" r="12" fill="#0A66C2"/>
+  <path
+    fill="#ffffff"
+    d="M7.051 17.999H4.5V9h2.551v8.999zM5.776 7.5a1.276 1.276 0 1 1 0-2.552 1.276 1.276 0 0 1 0 2.552zM19.5 18h-2.55v-4.357c0-1.04-.02-2.377-1.448-2.377-1.45 0-1.672 1.132-1.672 2.3V18h-2.55V9h2.448v1.229h.035c.341-.646 1.174-1.326 2.417-1.326 2.583 0 3.05 1.7 3.05 3.91V18z"
+  />
 </svg>
 </a>
     </li> 
@@ -88,9 +88,9 @@ export async function loadSvgSafely() {
 function getDomRefs() {
   return new Promise((resolve) => {
     function checkCanvas() {
-      const canvas = document.getElementById('beamsCanvas');
-      const section = document.querySelector('.xora-prezentationps');
-      const socialContainer = document.getElementById('socialContainer');
+      const canvas = document.getElementById("beamsCanvas");
+      const section = document.querySelector(".xora-prezentationps");
+      const socialContainer = document.getElementById("socialContainer");
 
       if (
         canvas === null ||
@@ -100,9 +100,9 @@ function getDomRefs() {
       ) {
         setTimeout(checkCanvas, 100);
       } else {
-        const ctx = canvas.getContext('2d');
-        const videoContainers = ['videoLeft', 'videoCenter', 'videoRight'];
-        const icons = ['iconTop', 'iconLeft', 'iconRight'];
+        const ctx = canvas.getContext("2d");
+        const videoContainers = ["videoLeft", "videoCenter", "videoRight"];
+        const icons = ["iconTop", "iconLeft", "iconRight"];
         resolve({
           canvas,
           ctx,
@@ -133,7 +133,7 @@ export async function initAnimation() {
   const radiusOuter = 110;
   let beams = [];
   let wave = null;
-  let animationPhase = 'idle';
+  let animationPhase = "idle";
   let phaseStartTime = 0;
   let isPaused = false;
 
@@ -153,35 +153,35 @@ export async function initAnimation() {
     const centerY = socialRect.top + socialRect.height / 2;
 
     if (wave) {
-      wave.style.left = centerX + 'px';
-      wave.style.top = centerY + 'px';
+      wave.style.left = centerX + "px";
+      wave.style.top = centerY + "px";
     }
   }
 
-  window.addEventListener('resize', updateLayout);
-  window.addEventListener('scroll', updateLayout);
+  window.addEventListener("resize", updateLayout);
+  window.addEventListener("scroll", updateLayout);
 
   document
-    .getElementById('socialContainer')
-    .addEventListener('mouseenter', function () {
+    .getElementById("socialContainer")
+    .addEventListener("mouseenter", function () {
       isPaused = true;
     });
 
   document
-    .getElementById('socialContainer')
-    .addEventListener('mouseleave', function () {
+    .getElementById("socialContainer")
+    .addEventListener("mouseleave", function () {
       isPaused = false;
     });
 
-  const videos = document.querySelectorAll('.xmpr-video');
+  const videos = document.querySelectorAll(".xmpr-video");
 
   videos.forEach((video) => {
-    video.addEventListener('mouseenter', () => {
+    video.addEventListener("mouseenter", () => {
       if (video.readyState >= 2) video.play().catch(() => {});
       isPaused = true;
     });
 
-    video.addEventListener('mouseleave', () => {
+    video.addEventListener("mouseleave", () => {
       video.pause();
       video.currentTime = 0;
       isPaused = false;
@@ -199,9 +199,9 @@ export async function initAnimation() {
       const x = centerX + radiusOuter * Math.cos(angle);
       const y = centerY + radiusOuter * Math.sin(angle);
 
-      icon.style.left = x + 'px';
-      icon.style.top = y + 'px';
-      icon.style.transform = 'translate(-50%, -50%)';
+      icon.style.left = x + "px";
+      icon.style.top = y + "px";
+      icon.style.transform = "translate(-50%, -50%)";
     }
   }
 
@@ -218,8 +218,8 @@ export async function initAnimation() {
       const x = centerX + currentRadius * Math.cos(angle);
       const y = centerY + currentRadius * Math.sin(angle);
 
-      icon.style.left = x + 'px';
-      icon.style.top = y + 'px';
+      icon.style.left = x + "px";
+      icon.style.top = y + "px";
     }
   }
 
@@ -227,7 +227,7 @@ export async function initAnimation() {
     const videoItem = document.getElementById(fromVideo);
     const videoRect = videoItem.getBoundingClientRect();
 
-    const h4 = videoItem.querySelector('.xmpr-titl-h4');
+    const h4 = videoItem.querySelector(".xmpr-titl-h4");
     const h4Rect = h4 ? h4.getBoundingClientRect() : videoRect;
 
     const sectionRect = section.getBoundingClientRect();
@@ -239,14 +239,14 @@ export async function initAnimation() {
     let startX, startY;
 
     if (isMobile) {
-      const listContainer = document.querySelector('.xmpr-list');
+      const listContainer = document.querySelector(".xmpr-list");
       const listRect = listContainer.getBoundingClientRect();
 
       const partWidth = listRect.width / 3;
 
       let partIndex;
-      if (fromVideo === 'videoLeft') partIndex = 0;
-      else if (fromVideo === 'videoCenter') partIndex = 1;
+      if (fromVideo === "videoLeft") partIndex = 0;
+      else if (fromVideo === "videoCenter") partIndex = 1;
       else partIndex = 2;
 
       startX =
@@ -269,9 +269,9 @@ export async function initAnimation() {
     const centerY = socialRect.top + socialRect.height / 2 - sectionRect.top;
 
     let targetAngle;
-    if (targetPosition === 'top') {
+    if (targetPosition === "top") {
       targetAngle = 270;
-    } else if (targetPosition === 'left') {
+    } else if (targetPosition === "left") {
       targetAngle = 160;
     } else {
       targetAngle = 30;
@@ -312,7 +312,7 @@ export async function initAnimation() {
     ctx.lineWidth = 3;
     ctx.shadowBlur = 25;
     ctx.shadowColor = getColor(1);
-    ctx.lineCap = 'round';
+    ctx.lineCap = "round";
 
     ctx.beginPath();
     ctx.moveTo(beam.startPos.x, beam.startPos.y);
@@ -359,25 +359,25 @@ export async function initAnimation() {
         const startX = x + Math.cos(angle) * radius;
         const startY = y + Math.sin(angle) * radius;
 
-        const spark = document.createElement('div');
-        spark.className = 'sparks';
+        const spark = document.createElement("div");
+        spark.className = "sparks";
         // spark.style.position = 'fixed';
-        spark.style.left = startX + 'px';
-        spark.style.top = startY + 'px';
+        spark.style.left = startX + "px";
+        spark.style.top = startY + "px";
         document.body.appendChild(spark);
 
         const velocity = 600 + Math.random() * 1000;
         const endX = x + Math.cos(angle) * (radius + velocity);
         const endY = y + Math.sin(angle) * (radius + velocity);
         const duration = 2 + Math.random() * 1.5;
-        spark.style.opacity = '1';
+        spark.style.opacity = "1";
 
         setTimeout(function () {
-          spark.style.transition = 'all ' + duration + 's ease-out';
-          spark.style.left = endX + 'px';
-          spark.style.top = endY + 'px';
+          spark.style.transition = "all " + duration + "s ease-out";
+          spark.style.left = endX + "px";
+          spark.style.top = endY + "px";
           // spark.style.opacity = '0';
-          spark.style.transform = 'scale(0.05)';
+          spark.style.transform = "scale(0.05)";
         }, 5);
 
         setTimeout(function () {
@@ -388,45 +388,45 @@ export async function initAnimation() {
   }
 
   function createReverseWave(startX, startY, callback) {
-    const videosRow = document.getElementById('videosRow');
+    const videosRow = document.getElementById("videosRow");
     const rowRect = videosRow.getBoundingClientRect();
 
-    const waveEl = document.createElement('div');
-    waveEl.className = 'reverse-wave';
-    waveEl.style.position = 'fixed';
-    waveEl.style.left = startX + 'px';
-    waveEl.style.top = startY + 'px';
-    waveEl.style.width = '130px';
-    waveEl.style.height = '130px';
-    waveEl.style.transform = 'translate(-50%, -50%) rotate(0deg)';
-    waveEl.style.zIndex = '50';
+    const waveEl = document.createElement("div");
+    waveEl.className = "reverse-wave";
+    waveEl.style.position = "fixed";
+    waveEl.style.left = startX + "px";
+    waveEl.style.top = startY + "px";
+    waveEl.style.width = "130px";
+    waveEl.style.height = "130px";
+    waveEl.style.transform = "translate(-50%, -50%) rotate(0deg)";
+    waveEl.style.zIndex = "50";
     section.appendChild(waveEl);
 
-    waveEl.style.opacity = '1';
-    waveEl.style.transition = 'all 1.2s ease-out';
+    waveEl.style.opacity = "1";
+    waveEl.style.transition = "all 1.2s ease-out";
 
     const distance = Math.abs(startY - rowRect.bottom);
     const targetSize = distance * 2 + 300;
 
     setTimeout(function () {
-      waveEl.style.width = targetSize + 'px';
-      waveEl.style.height = targetSize + 'px';
+      waveEl.style.width = targetSize + "px";
+      waveEl.style.height = targetSize + "px";
     }, 50);
 
     setTimeout(function () {
       for (let i = 0; i < videoContainers.length; i++) {
-        document.getElementById(videoContainers[i]).classList.add('energized');
+        document.getElementById(videoContainers[i]).classList.add("energized");
       }
     }, 800);
 
     setTimeout(function () {
-      waveEl.style.opacity = '0';
+      waveEl.style.opacity = "0";
 
       setTimeout(function () {
         for (let i = 0; i < videoContainers.length; i++) {
           document
             .getElementById(videoContainers[i])
-            .classList.remove('energized');
+            .classList.remove("energized");
         }
         waveEl.remove();
         if (callback) callback();
@@ -442,21 +442,21 @@ export async function initAnimation() {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    if (animationPhase === 'idle') {
+    if (animationPhase === "idle") {
       phaseStartTime = timestamp;
-      animationPhase = 'growing';
+      animationPhase = "growing";
 
       beams = [
-        createBeam('videoLeft', 'left'),
-        createBeam('videoCenter', 'top'),
-        createBeam('videoRight', 'right'),
+        createBeam("videoLeft", "left"),
+        createBeam("videoCenter", "top"),
+        createBeam("videoRight", "right"),
       ];
 
       if (wave) {
         wave.remove();
         wave = null;
       }
-    } else if (animationPhase === 'growing') {
+    } else if (animationPhase === "growing") {
       const elapsed = timestamp - phaseStartTime;
       const duration = 1000;
       const progress = Math.min(elapsed / duration, 1);
@@ -467,27 +467,27 @@ export async function initAnimation() {
       }
 
       if (progress >= 1) {
-        animationPhase = 'compressing';
+        animationPhase = "compressing";
         phaseStartTime = timestamp;
 
         const socialRect = socialContainer.getBoundingClientRect();
         const centerX = socialRect.left + socialRect.width / 2;
         const centerY = socialRect.top + socialRect.height / 2;
 
-        wave = document.createElement('div');
-        wave.className = 'energy-wave';
-        wave.style.position = 'fixed';
-        wave.style.left = centerX + 'px';
-        wave.style.top = centerY + 'px';
-        wave.style.width = radiusOuter * 2 + 'px';
-        wave.style.height = radiusOuter * 2 + 'px';
-        wave.style.transform = 'translate(-50%, -50%)';
-        wave.style.opacity = '1';
-        wave.style.transition = 'none';
-        wave.style.zIndex = '100';
+        wave = document.createElement("div");
+        wave.className = "energy-wave";
+        wave.style.position = "fixed";
+        wave.style.left = centerX + "px";
+        wave.style.top = centerY + "px";
+        wave.style.width = radiusOuter * 2 + "px";
+        wave.style.height = radiusOuter * 2 + "px";
+        wave.style.transform = "translate(-50%, -50%)";
+        wave.style.opacity = "1";
+        wave.style.transition = "none";
+        wave.style.zIndex = "100";
         socialContainer.appendChild(wave);
       }
-    } else if (animationPhase === 'compressing') {
+    } else if (animationPhase === "compressing") {
       const elapsed = timestamp - phaseStartTime;
       const duration = 1200;
       const progress = Math.min(elapsed / duration, 1);
@@ -506,10 +506,10 @@ export async function initAnimation() {
         const minSize = 50;
         const maxSize = radiusOuter * 2 + 120;
         const waveSize = minSize + (maxSize - minSize) * scale;
-        wave.style.transition = 'none';
-        wave.style.width = waveSize + 'px';
-        wave.style.height = waveSize + 'px';
-        wave.style.opacity = '1';
+        wave.style.transition = "none";
+        wave.style.width = waveSize + "px";
+        wave.style.height = waveSize + "px";
+        wave.style.opacity = "1";
       }
 
       if (progress >= 1) {
@@ -535,10 +535,10 @@ export async function initAnimation() {
           currentVideoIndex = (currentVideoIndex + 1) % 3;
         });
 
-        animationPhase = 'exploding';
+        animationPhase = "exploding";
         phaseStartTime = timestamp + 500;
       }
-    } else if (animationPhase === 'exploding') {
+    } else if (animationPhase === "exploding") {
       const elapsed = timestamp - phaseStartTime;
       if (elapsed < 0) {
         return requestAnimationFrame(animate);
@@ -548,9 +548,9 @@ export async function initAnimation() {
       const progress = Math.min(elapsed / duration, 1);
 
       const centerX =
-        document.getElementById('socialContainer').offsetWidth / 2;
+        document.getElementById("socialContainer").offsetWidth / 2;
       const centerY =
-        document.getElementById('socialContainer').offsetHeight / 2;
+        document.getElementById("socialContainer").offsetHeight / 2;
       const minRadius = 30;
       const currentRadius = minRadius + (radiusOuter - minRadius) * progress;
 
@@ -561,19 +561,19 @@ export async function initAnimation() {
         const x = centerX + currentRadius * Math.cos(angle);
         const y = centerY + currentRadius * Math.sin(angle);
 
-        icon.style.left = x + 'px';
-        icon.style.top = y + 'px';
+        icon.style.left = x + "px";
+        icon.style.top = y + "px";
       }
 
       if (progress >= 1) {
-        animationPhase = 'waiting';
+        animationPhase = "waiting";
         phaseStartTime = timestamp;
       }
-    } else if (animationPhase === 'waiting') {
+    } else if (animationPhase === "waiting") {
       const elapsed = timestamp - phaseStartTime;
 
       if (elapsed > 500) {
-        animationPhase = 'idle';
+        animationPhase = "idle";
       }
     }
 
@@ -583,8 +583,8 @@ export async function initAnimation() {
     if (animationId) cancelAnimationFrame(animationId);
     animationId = null;
 
-    window.removeEventListener('resize', updateLayout);
-    window.removeEventListener('scroll', updateLayout);
+    window.removeEventListener("resize", updateLayout);
+    window.removeEventListener("scroll", updateLayout);
 
     // Очищення соціального контейнера без втрати посилання
     socialContainer.innerHTML = socialContainer.innerHTML;
