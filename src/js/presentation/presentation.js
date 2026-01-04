@@ -63,22 +63,22 @@ export async function loadSvgSafely() {
 </svg>
 
     </a>
-    </li>
-    <li class="social-icon" id="iconRight">
-    <a class="icon-link" href="https://www.linkedin.com/in/dmytro-zhulyk-716545365" target="_blank" rel="noopener noreferrer">
+     </li>
+     <li class="social-icon" id="iconRight">
+      <a class="icon-link" href="https://www.linkedin.com/in/dmytro-zhulyk-716545365" target="_blank" rel="noopener noreferrer">
        <svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  role="img"
-  aria-label="LinkedIn">
-  <title>LinkedIn</title>
-  <circle cx="12" cy="12" r="12" fill="#0A66C2"/>
-  <path
-    fill="#ffffff"
-    d="M7.051 17.999H4.5V9h2.551v8.999zM5.776 7.5a1.276 1.276 0 1 1 0-2.552 1.276 1.276 0 0 1 0 2.552zM19.5 18h-2.55v-4.357c0-1.04-.02-2.377-1.448-2.377-1.45 0-1.672 1.132-1.672 2.3V18h-2.55V9h2.448v1.229h.035c.341-.646 1.174-1.326 2.417-1.326 2.583 0 3.05 1.7 3.05 3.91V18z"
-  />
-</svg>
-</a>
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24"
+          role="img"
+          aria-label="LinkedIn">
+         <title>LinkedIn</title>
+         <circle cx="12" cy="12" r="12" fill="#0A66C2"/>
+         <path
+         fill="#ffffff"
+         d="M7.051 17.999H4.5V9h2.551v8.999zM5.776 7.5a1.276 1.276 0 1 1 0-2.552 1.276 1.276 0 0 1 0 2.552zM19.5 18h-2.55v-4.357c0-1.04-.02-2.377-1.448-2.377-1.45 0-1.672 1.132-1.672 2.3V18h-2.55V9h2.448v1.229h.035c.341-.646 1.174-1.326 2.417-1.326 2.583 0 3.05 1.7 3.05 3.91V18z"
+        />
+     </svg>
+    </a>
     </li> 
   `;
 
